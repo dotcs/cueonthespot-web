@@ -9,6 +9,13 @@ import {CueGenerator} from './cue-generator';
 // Sample data used during development
 const exampleAlbumData = require('../examples/album-detail.json');
 
+/**
+ * Extend the interface of a track, such that it can be toggled.
+ */
+interface ISpotifyAPITrackToggleable extends ISpotifyAPITrack {
+  _isChecked: boolean;
+}
+
 @Pipe({
   name: 'duration'
 })
@@ -81,7 +88,7 @@ export class DurationPipe {
   `
 })
 export class SpotifyAlbumDetail {
-  result: any;
+  result: ISpotifyAPIAlbum;
 
   constructor(public spotify: SpotifySrv, params: RouteParams) {
     this.result = null;
@@ -91,13 +98,13 @@ export class SpotifyAlbumDetail {
       this.result = response;
 
       // prepare checkbox support
-      this.toggleAllTrackItems(this.result.tracks.items, true);
+      this.toggleAllTrackItems(<ISpotifyAPITrackToggleable[]>this.result.tracks.items, true);
     });
 
     //const id = '0sNOF9WDwhWunNAHPD3Baj';
     //this.result = exampleAlbumData;
     // prepare checkbox support
-    //this.toggleAllTrackItems(this.result.tracks.items, true);
+    //this.toggleAllTrackItems(<ISpotifyAPITrackToggleable[]>this.result.tracks.items, true);
 
   }
 
@@ -106,7 +113,7 @@ export class SpotifyAlbumDetail {
   }
 
   getAlbumCover(size: string | number) {
-    const { images } = this.result;
+    let { images } = this.result;
     if (!images) {
       return null;
     }
@@ -117,24 +124,24 @@ export class SpotifyAlbumDetail {
       case 'MIN':
         return _.last(orderedCovers);
       default:
-        if (typeof size === 'string') {
+        if (typeof size !== 'number') {
           return null;
         }
-        orderedCovers = _.sortBy(images, image => Math.abs(image.width - size));
+        orderedCovers = _.sortBy(images, image => Math.abs(image.width - <number>size));
         return _.first(orderedCovers);
     }
   }
 
-  groupTracksByDiscs(trackItems) {
+  groupTracksByDiscs(trackItems: ISpotifyAPITrackToggleable[]) {
     const grouped = _.groupBy(trackItems, 'disc_number');
     return grouped;
   }
 
-  anyTrackHasPreview(trackItems) {
+  anyTrackHasPreview(trackItems: ISpotifyAPITrackToggleable[]): boolean {
     return _.any(_.map(trackItems, item => item.preview_url !== null));
   }
 
-  allTrackItemsChecked(trackItems) {
+  allTrackItemsChecked(trackItems: ISpotifyAPITrackToggleable[]): boolean {
     return _.all(_.map(trackItems, item => item._isChecked));
   }
 
@@ -150,7 +157,7 @@ export class SpotifyAlbumDetail {
   downloadCueSheet() {
     const { artists, name, release_date, tracks } = this.result;
     let generator = new CueGenerator(_.map(artists, artist => artist.name).join(', '), name, release_date, 1);
-    generator.addDisk(1, _.filter(tracks.items, item => item._isChecked));
+    generator.addDisk(1, _.filter(<ISpotifyAPITrackToggleable[]>tracks.items, item => item._isChecked));
     console.log(generator.getCueSheet());
     generator.downloadCueSheet();
   }
@@ -160,7 +167,7 @@ export class SpotifyAlbumDetail {
     let filename = `${_.map(artists, artist => artist.name).join(', ')} - ${name}.jpg`;
     let element = document.createElement('a');
     element.href = this.getAlbumCover('MAX').url;
-    element.download = filename;
+    element.setAttribute("download", filename);
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);

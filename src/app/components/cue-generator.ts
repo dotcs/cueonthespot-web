@@ -1,34 +1,7 @@
 const APP = require('../../../package.json');
 console.log(APP);
 
-interface ISpotifyArtist {
-  external_urls: {
-    spotify: string
-  },
-  href: string,
-  id: string,
-  name: string,
-  type: string,
-  uri: string
-}
 
-interface ISpotifyTrack {
-  artists: Array<ISpotifyArtist>,
-  available_markets: Array<string>,
-  disc_number: number,
-  duration_ms: number,
-  explicit: boolean,
-  external_urls: {
-    spotify: string
-  },
-  href: string,
-  id: string,
-  name: string,
-  preview_url: string,
-  track_number: number,
-  type: string,
-  uri: string
-}
 
 export class CueGenerator {
   service: string;
@@ -36,7 +9,7 @@ export class CueGenerator {
   app: {name: string, version: string, url: string};
   cumTimeMs: number; // cummulated time im milli-seconds
 
-  constructor(public artist: string, public title: string, public year: number, public totalDisks?: number) {
+  constructor(public artist: string, public title: string, public year: string, public totalDisks?: number) {
     this.service = 'Spotify';
     this.app = {
       name: APP.name,
@@ -67,7 +40,7 @@ REM SERVICE "${this.service}"
     return `${this.zeroPad(minutes, 2)}:${this.zeroPad(seconds, 2)}:${this.zeroPad(Math.floor(milliseconds / 10), 2)}`;
   }
 
-  public addDisk(diskNumber: number, trackList: Array<ISpotifyTrack>) {
+  public addDisk(diskNumber: number, trackList: Array<ISpotifyAPITrack>) {
     this.result +=
 `REM DISCNUMBER ${diskNumber}
 REM TOTALDISCS ${this.totalDisks}
