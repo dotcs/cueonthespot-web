@@ -16,6 +16,8 @@ import {HTTP_BINDINGS} from 'angular2/http';
  */
 import {App} from './app';
 
+require('./styles/main.scss');
+
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
  * our services/bindings into Angular's dependency injection

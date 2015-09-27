@@ -1,0 +1,45 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+main { margin-bottom: $grid-gutter-width; }
+.navbar { border-radius: 0; }
+.Album {}
+.AlbumMeta {
+  .headline { margin-top: 0; }
+  .market {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    & > li {
+      display: inline-block;
+      padding: .2em;
+      margin-right: .5em;
+      background-color: #efefef;
+      margin-bottom: .5em;
+      border-radius: 3px;
+    }
+  }
+  .artist {
+    list-style: none;
+    margin: .5em 0;
+    padding: 0;
+    & > li {
+      display: inline-block;
+      margin-right: .5em;
+    }
+  }
+}
+
+.Search {
+  display: flex;
+  flex-direction: row;
+  input { width: 60%; }
+  select { width: 20%; }
+  button { width: 20%; }
+}
+
+.SearchResults {
+  .table>tbody>tr>td { vertical-align: middle; }
+  .reference { padding: 2em; }
+  .no-results-info { margin: 1em 0; }
+}

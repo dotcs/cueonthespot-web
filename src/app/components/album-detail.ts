@@ -36,53 +36,66 @@ export class DurationPipe {
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES],
   pipes: [DurationPipe],
   template: `
-  <div>
+  <div class="Album">
     <div *ng-if="!result">loading data</div>
     <div *ng-if="result">
-      <img [src]="getAlbumCover(300).url" *ng-if="hasAlbumCovers()" />
-      <ul>
-        <li *ng-for="#artist of result.artists">
-          <a href="#">{{ artist.name }}</a>
-        </li>
-      </ul>
-      <ul>
-        <li *ng-for="#market of result.available_markets">
-          {{ market }}
-        </li>
-      </ul>
+      <div class="AlbumMeta">
+        <div class="row">
+          <div class="col-xs-6 col-sm-4">
+            <img [src]="getAlbumCover(300).url" *ng-if="hasAlbumCovers()" class="img-responsive"/>
+          </div>
+          <div class="col-xs-6 col-sm-8">
+            <h1 class="headline">{{ result.name }}</h1>
+            <span>{{ result.release_date }}</span>
+            <ul class="artist">
+              <li *ng-for="#artist of result.artists">
+                <a href="#">{{ artist.name }}</a>
+              </li>
+            </ul>
+            <ul class="market">
+              <li *ng-for="#market of result.available_markets">
+                {{ market }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="album">
-        <h1>{{ result.name }}</h1>
-        <span>{{ result.release_date }}</span>
-
-        <table>
+        <table class="table table-striped">
         <thead>
           <tr>
-            <th><input type="checkbox"
+            <th class="text-center"><input type="checkbox"
               [ng-model]="allTrackItemsChecked(result.tracks.items)"
               (click)="toggleAllTrackItems(result.tracks.items)"/></th>
-            <th>Track number</th>
+            <th class="text-center">Track number</th>
             <th>Name</th>
-            <th>Duration</th>
-            <th>Explicit</th>
-            <th *ng-if="anyTrackHasPreview(result.tracks.items)">Preview</th>
+            <th class="text-center">Duration</th>
+            <th class="text-center">Explicit</th>
+            <th class="text-center" *ng-if="anyTrackHasPreview(result.tracks.items)">Preview</th>
           </tr>
         </thead>
         <tbody>
           <tr *ng-for="#item of result.tracks.items">
-            <td><input type="checkbox" [(ng-model)]="item._isChecked" [checked]="item._isChecked" /></td>
-            <td>{{ item.track_number }}</td>
+            <td class="text-center"><input type="checkbox" [(ng-model)]="item._isChecked" [checked]="item._isChecked" /></td>
+            <td class="text-center">{{ item.track_number }}</td>
             <td>{{ item.name }}</td>
-            <td>{{ item.duration_ms | duration }}</td>
-            <td>{{ item.explicit ? 'yes' : 'no'}}</td>
-            <td *ng-if="anyTrackHasPreview(result.tracks.items)">
-              <a [href]="item.preview_url" *ng-if="item.preview_url !== null">Preview</a>
+            <td class="text-center">{{ item.duration_ms | duration }}</td>
+            <td class="text-center"><i class="glyphicon {{ item.explicit ? 'glyphicon-ok' : 'glyphicon-remove'}}"></i></td>
+            <td class="text-center" *ng-if="anyTrackHasPreview(result.tracks.items)">
+              <a [href]="item.preview_url" target="_blank" *ng-if="item.preview_url !== null">
+                <i class="glyphicon glyphicon-music"></i>
+              </a>
             </td>
           </tr>
         </tbody>
         </table>
       </div>
-      <button (click)="downloadCueSheet()">Download CUE sheet</button>
-      <button (click)="downloadAlbumCover()">Download album cover</button>
+      <div class="text-center">
+        <div class="btn-group" role="group">
+          <button class="btn btn-default" (click)="downloadCueSheet()">Download CUE sheet</button>
+          <button class="btn btn-default" (click)="downloadAlbumCover()">Download album cover</button>
+        </div>
+      </div>
     </div>
   </div>
   `

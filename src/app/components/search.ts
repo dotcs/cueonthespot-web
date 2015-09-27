@@ -19,31 +19,45 @@ interface IResultImage {
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES],
   template: `
   <div>
-    <div class="SpotSearch">
-      <input type="text" [(ng-model)]="q" placeholder="Search spotify" />
-      <select name="type" [(ng-model)]="type">
-        <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
-          {{ type.label }}
-        </option>
-      </select>
-      <button (click)="query()">Load results</button>
+    <div class="Search">
+        <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control" />
+        <select name="type" [(ng-model)]="type" class="form-control">
+          <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
+            {{ type.label }}
+          </option>
+        </select>
+        <button (click)="query()" class="btn btn-default">Load results</button>
     </div>
-    <div class="SpotResults">
-      <ul *ng-if="results">
-        <li *ng-for="#item of results.items">
-          <img [src]="getImageUrl(item.images)" alt="image" />
-          {{ item.name }}
-          <button
-            [router-link]="getRouterLinkForUri(item.uri)">
-            {{ item.uri }}
-          </button>
-        </li>
-      </ul>
-      <div *ng-if="hasNextPage()">
-        <button (click)="loadNextPage()">Next page</button>
+    <div class="SearchResults">
+      <table class="table table-striped" *ng-if="results">
+        <thead>
+        <tr>
+          <th>Cover</th>
+          <th>Albumtitle</th>
+          <th>Reference</th>
+        </tr>
+        <tbody>
+        <tr *ng-for="#item of results.items">
+          <td>
+            <img [src]="getImageUrl(item.images)" alt="image" />
+          </td>
+          <td>{{ item.name }}</td>
+          <td class="text-center">
+            <a [router-link]="getRouterLinkForUri(item.uri)" class="reference">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+            </a>
+          </td>
+        </tr>
+        </tbody>
+        </thead>
+      </table>
+      <div *ng-if="hasNextPage()" class="text-center">
+        <button (click)="loadNextPage()" class="btn btn-default">Next page</button>
       </div>
-      <div *ng-if="!results">
-        no results yet
+      <div *ng-if="!results" class="no-results-info">
+        <div class="alert alert-info">
+          <strong>Info</strong>: No results.
+        </div>
       </div>
     </div>
   </div>
@@ -57,7 +71,7 @@ export class SpotifySearch{
 
   constructor(public spotify: SpotifySrv) {
     this.q = '';
-    this.type = 'artists';
+    this.type = 'albums'; // default type
     this.types = [
       {value: 'artists', label: 'Artist'},
       {value: 'albums', label: 'Album'},

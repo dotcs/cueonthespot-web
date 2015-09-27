@@ -14,6 +14,8 @@ var path = require('path');
 
 // NPM
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
+var csswring = require('csswring');
 
 // Webpack Plugins
 var OccurenceOrderPlugin = webpack.optimize.OccurenceOrderPlugin;
@@ -122,8 +124,9 @@ module.exports = {
       // Support for *.json files.
       { test: /\.json$/,  loader: 'json' },
 
-      // Support for CSS as raw text
-      { test: /\.css$/,   loader: 'raw' },
+      // Support for CSS and SCSS files
+      { test: /\.css$/,  loader: 'style!css' },
+      { test: /\.scss$/, exclude: /node_modules/,  loader: 'style!css!postcss-loader!sass' },
 
       // support for .html as raw text
       { test: /\.html$/,  loader: 'raw' },
@@ -146,12 +149,22 @@ module.exports = {
           /test/,
           /node_modules/
         ]
-      }
+      },
+
+      // Loader for fonts
+      { test: /\.woff2?($|\?)/, loader: "url?limit=10000&mimetype=application/font-woff" },
+      { test: /\.ttf($|\?)/,    loader: "url?limit=10000&mimetype=application/octet-stream" },
+      { test: /\.eot($|\?)/,    loader: "file" },
+      { test: /\.svg($|\?)/,    loader: "url?limit=10000&mimetype=image/svg+xml" }
     ],
     noParse: [
       /rtts_assert\/src\/rtts_assert/,
       /reflect-metadata/
     ]
+  },
+
+  postcss: function () {
+    return [autoprefixer, csswring];
   },
 
   plugins: env({
