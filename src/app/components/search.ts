@@ -11,6 +11,9 @@ interface IResultImage {
   url: string;
 }
 
+/**
+ * Search component
+ */
 @Component({
   selector: 'spotify-search',
   viewBindings: [SpotifySrv]
@@ -80,15 +83,26 @@ export class SpotifySearch{
     this.results = null;
   }
 
+  /**
+   * Find the smallest image and return its URL.
+   * @param images {IResultImage[]} List of images to choose from
+   * @returns {string} URL of the chosen image
+   */
   private getImageUrl(images: Array<IResultImage>) {
     const sortedImages = _.sortBy(images, image => image.width * image.height);
     if (sortedImages.length > 0) {
       return sortedImages[0].url
     }
-    return {}
+    // TODO: add placeholder image?
+    return '';
   }
 
-  getRouterLinkForUri(uri) {
+  /**
+   * Construct a router link for a given Spotify URI.
+   * @param uri {string} Spotify URI
+   * @returns {any} Route representation that is consumable by the "router-link" attribute of angular's router.
+   */
+  getRouterLinkForUri(uri: string) {
     const parts = uri.split(':');
     let route = '';
     switch (parts[1]) {
@@ -102,10 +116,17 @@ export class SpotifySearch{
     return [route, {id: parts[2]}];
   }
 
+  /**
+   * Check if the result set does have a next page.
+   * @returns {boolean} `true` if a next page exists, `false` if not.
+   */
   hasNextPage() {
     return this.results && this.results.next !== null;
   }
 
+  /**
+   * Load next page and update the result set to show new entries.
+   */
   loadNextPage() {
     const { next } = this.results;
     this.spotify.loadUrl(next).subscribe(results => {
@@ -115,6 +136,9 @@ export class SpotifySearch{
     });
   }
 
+  /**
+   * Generic query method that queries the Spotify service based on the `type` that the user has selected in the UI.
+   */
   query() {
     this.spotify.query(this.type, this.q)
       .subscribe(results => {

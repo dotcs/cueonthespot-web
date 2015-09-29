@@ -40,11 +40,23 @@ export class SpotifySrv {
     return this.loadUrl(url);
   }
 
+  /**
+   * Query an album based on its ID.
+   *
+   * @param id {string} Spotify's album identifier
+   * @returns {Observable<Object>|Rx.Observable<Object>} Rx.Observable
+   */
   public queryAlbum(id: string) {
     const url = `${this.baseUrl}/v1/albums/${id}`;
     return this.loadUrl(url);
   }
 
+  /**
+   * Helper method to load a URL via GET.
+   *
+   * @param url {string} URL that should be requested
+   * @returns {Observable<Object>|Rx.Observable<Object>} Rx.Observable
+   */
   public loadUrl(url: string) {
     return this.http.get(url)
       .toRx()
