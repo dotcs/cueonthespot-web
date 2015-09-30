@@ -45,7 +45,7 @@ export class DurationPipe {
 })
 @View({
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES],
-  pipes: [DurationPipe],
+  //pipes: [DurationPipe],
   template: `
   <div class="Album">
     <div *ng-if="!result">loading data</div>
@@ -90,7 +90,7 @@ export class DurationPipe {
             <td class="text-center"><input type="checkbox" [(ng-model)]="item._isChecked" [checked]="item._isChecked" /></td>
             <td class="text-center">{{ item.track_number }}</td>
             <td>{{ item.name }}</td>
-            <td class="text-center">{{ item.duration_ms | duration }}</td>
+            <td class="text-center">{{ item.duration_ms }}</td>
             <td class="text-center"><i class="glyphicon {{ item.explicit ? 'glyphicon-ok' : 'glyphicon-remove'}}"></i></td>
             <td class="text-center" *ng-if="anyTrackHasPreview(result.tracks.items)">
               <a [href]="item.preview_url" target="_blank" *ng-if="item.preview_url !== null">
