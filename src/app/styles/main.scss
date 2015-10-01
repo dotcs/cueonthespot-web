@@ -30,12 +30,18 @@ main { margin-bottom: $grid-gutter-width; }
   }
 }
 
-.Search {
-  display: flex;
-  flex-direction: row;
-  input { width: 60%; }
-  select { width: 20%; }
-  button { width: 20%; }
+@media screen and (max-width: $screen-xs-max) {
+  .Search-query,
+  .Search-type,
+  .Search-btn{
+    margin-bottom: ($grid-gutter-width / 4);
+  }
+}
+@media screen and (min-width: $screen-sm) {
+  .Search { display: flex; }
+  .Search-query { width: 60%; }
+  .Search-type { width: 20%; }
+  .Search-btn { width: 20%; }
 }
 
 .SearchResults {
