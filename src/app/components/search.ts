@@ -23,13 +23,14 @@ interface IResultImage {
   template: `
   <div>
     <div class="Search">
-        <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control" />
-        <select name="type" [(ng-model)]="type" class="form-control">
-          <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
-            {{ type.label }}
-          </option>
-        </select>
-        <button (click)="query()" class="btn btn-default">Load results</button>
+      <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control Search-query"
+        (keyup)="searchFieldKeyHandler($event, query)" #query />
+      <select name="type" [(ng-model)]="type" class="form-control Search-type">
+        <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
+          {{ type.label }}
+        </option>
+      </select>
+      <button (click)="query()" class="btn btn-default Search-btn" [disabled]="q.length === 0">Load results</button>
     </div>
     <div class="SearchResults">
       <table class="table table-striped" *ng-if="results">
@@ -81,6 +82,8 @@ export class SpotifySearch{
       //{value: 'artists+albums', label: 'Artist + Album'},
     ];
     this.results = null;
+
+    this.searchFieldKeyHandler = this.searchFieldKeyHandler.bind(this);
   }
 
   /**
@@ -144,6 +147,17 @@ export class SpotifySearch{
       .subscribe(results => {
         this.results = results[this.type];
       });
+  }
+
+  /**
+   * Handler for key presses in the search query field.
+   * @param event {KeyboardEvent} Keyboard event
+   * @param query {HTMLInputElement} Input element that fired the event
+   */
+  searchFieldKeyHandler(event, query) {
+    if (event.keyCode === 13 && this.q.length > 0) {
+      this.query();
+    }
   }
 
 }
