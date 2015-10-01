@@ -24,7 +24,7 @@ interface IResultImage {
   <div>
     <div class="Search">
       <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control Search-query"
-        (keyup)="searchFieldKeyHandler($event, query)" #query />
+        (keyup)="searchFieldKeyHandler($event, queryInput)" #queryInput />
       <select name="type" [(ng-model)]="type" class="form-control Search-type">
         <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
           {{ type.label }}
