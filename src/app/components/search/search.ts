@@ -5,7 +5,6 @@ import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES } from 'angular2/router';
 
 import {SpotifySrv} from '../spotify';
-import {SpotifyResults} from './results';
 
 interface IResultImage {
   width: number,
@@ -22,54 +21,7 @@ interface IResultImage {
 })
 @View({
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES ],
-  template: `
-  <div>
-    <div class="Search">
-      <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control Search-query"
-        (keyup)="searchFieldKeyHandler($event)" />
-      <select name="type" [(ng-model)]="type" class="form-control Search-type">
-        <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
-          {{ type.label }}
-        </option>
-      </select>
-      <a [router-link]="getRouterLinkConfFromQuery()"
-        class="btn btn-default Search-btn" [class.disabled]="q.length === 0">Load results</a>
-    </div>
-
-    <div class="SearchResults">
-      <table class="table table-striped" *ng-if="results">
-        <thead>
-        <tr>
-          <th>Cover</th>
-          <th>Albumtitle</th>
-          <th>Reference</th>
-        </tr>
-        <tbody>
-        <tr *ng-for="#item of results.items">
-          <td>
-            <img [src]="getImageUrl(item.images)" alt="image" />
-          </td>
-          <td>{{ item.name }}</td>
-          <td class="text-center">
-            <a [router-link]="getRouterLinkForUri(item.uri)" class="reference">
-              <i class="glyphicon glyphicon-chevron-right"></i>
-            </a>
-          </td>
-        </tr>
-        </tbody>
-        </thead>
-      </table>
-      <div *ng-if="hasNextPage()" class="text-center">
-        <button (click)="loadNextPage()" class="btn btn-default">Next page</button>
-      </div>
-      <div *ng-if="!results" class="no-results-info">
-        <div class="alert alert-info">
-          <strong>Info</strong>: No results.
-        </div>
-      </div>
-    </div>
-  </div>
-  `
+  template: require('to-string!./search.html')
 })
 export class SpotifySearch{
   q: string;
@@ -79,8 +31,13 @@ export class SpotifySearch{
 
   constructor(public spotify: SpotifySrv, public params: RouteParams, public router: Router,
               public location: Location) {
-    this.q = params.get('query') || '';
-    this.type = params.get('type') || 'albums'; // default type
+
+    var loadURIComponent = (name: string, fallback: string): string => {
+      return decodeURIComponent(params.get(name) || fallback);
+    };
+    this.q = loadURIComponent('query', '');
+    this.type = loadURIComponent('albums', 'albums');
+
     this.types = [
       {value: 'artists', label: 'Artist'},
       {value: 'albums', label: 'Album'},
@@ -174,6 +131,7 @@ export class SpotifySearch{
       // TODO: there should be a less verbose and less complicated way to do this, right?
       let navigationInstruction = this.router.generate(this.getRouterLinkConfFromQuery());
       this.location.go('/' + navigationInstruction.component.urlPath);
+      this.query();
     }
   }
 

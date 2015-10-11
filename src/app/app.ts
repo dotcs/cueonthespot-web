@@ -13,9 +13,9 @@ import {Http, Headers} from 'angular2/http';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {Navbar} from './components/navbar';
-import {SpotifySearch} from './components/search';
-import {SpotifyAlbumDetail} from './components/album-detail';
+import {Navbar} from './components/navbar/navbar';
+import {SpotifySearch} from './components/search/search';
+import {SpotifyAlbumDetail} from './components/album_detail/album_detail';
 
 @Component()
 @View({

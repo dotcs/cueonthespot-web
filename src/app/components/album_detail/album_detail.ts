@@ -3,11 +3,11 @@ import {Component, View, Pipe} from 'angular2/angular2';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
 
-import {SpotifySrv} from './spotify';
-import {CueGenerator} from './cue-generator';
+import {SpotifySrv} from '../spotify';
+import {CueGenerator} from '../../lib/cue-generator';
 
 // Sample data used during development
-const exampleAlbumData = require('../examples/album-detail.json');
+const exampleAlbumData = require('../../examples/album-detail.json');
 
 /**
  * Extend the interface of a track, such that it can be toggled.
@@ -46,70 +46,7 @@ export class DurationPipe {
 @View(<any>{ // FIXME: remove any as soon as Pipes do not make a problem in TS anymore
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES],
   pipes: [DurationPipe],
-  template: `
-  <div class="Album">
-    <div *ng-if="!result">loading data</div>
-    <div *ng-if="result">
-      <div class="AlbumMeta">
-        <div class="row">
-          <div class="col-xs-6 col-sm-4">
-            <img [src]="getAlbumCover(300).url" *ng-if="hasAlbumCover()" class="img-responsive"/>
-          </div>
-          <div class="col-xs-6 col-sm-8">
-            <h1 class="headline">{{ result.name }}</h1>
-            <span>{{ result.release_date }}</span>
-            <ul class="artist">
-              <li *ng-for="#artist of result.artists">
-                <a href="#">{{ artist.name }}</a>
-              </li>
-            </ul>
-            <ul class="market">
-              <li *ng-for="#market of result.available_markets">
-                {{ market }}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="album">
-        <table class="table table-striped">
-        <thead>
-          <tr>
-            <th class="text-center"><input type="checkbox"
-              [ng-model]="allTrackItemsChecked(result.tracks.items)"
-              (click)="toggleAllTrackItems(result.tracks.items)"/></th>
-            <th class="text-center">Track number</th>
-            <th>Name</th>
-            <th class="text-center">Duration</th>
-            <th class="text-center">Explicit</th>
-            <th class="text-center" *ng-if="anyTrackHasPreview(result.tracks.items)">Preview</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ng-for="#item of result.tracks.items">
-            <td class="text-center"><input type="checkbox" [(ng-model)]="item._isChecked" [checked]="item._isChecked" /></td>
-            <td class="text-center">{{ item.track_number }}</td>
-            <td>{{ item.name }}</td>
-            <td class="text-center">{{ item.duration_ms | duration }}</td>
-            <td class="text-center"><i class="glyphicon {{ item.explicit ? 'glyphicon-ok' : 'glyphicon-remove'}}"></i></td>
-            <td class="text-center" *ng-if="anyTrackHasPreview(result.tracks.items)">
-              <a [href]="item.preview_url" target="_blank" *ng-if="item.preview_url !== null">
-                <i class="glyphicon glyphicon-music"></i>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-        </table>
-      </div>
-      <div class="text-center">
-        <div class="btn-group" role="group">
-          <button class="btn btn-default" (click)="downloadCueSheet()">Download CUE sheet</button>
-          <button class="btn btn-default" (click)="downloadAlbumCover()">Download album cover</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  `
+  template: require('to-string!./album_detail.html')
 })
 export class SpotifyAlbumDetail {
   result: ISpotifyAPIAlbum;
