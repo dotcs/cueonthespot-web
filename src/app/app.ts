@@ -36,6 +36,8 @@ class NotImplementedYet {
  */
 @RouteConfig([
   { path: '/search', component: SpotifySearch, 'as': 'search' },
+  { path: '/search/:type/', component: SpotifySearch, 'as': 'search-type' },
+  { path: '/search/:type/:query', component: SpotifySearch, 'as': 'search-type-query' },
   { path: '/artist/:id', component: NotImplementedYet, 'as': 'artist-detail' },
   { path: '/album/:id', component: SpotifyAlbumDetail, 'as': 'album-detail' }
 ])

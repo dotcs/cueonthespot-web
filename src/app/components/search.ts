@@ -1,9 +1,11 @@
 import {Component, View} from 'angular2/angular2';
+import {RouteConfig, Router, RouteParams, Location } from 'angular2/router';
 
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {ROUTER_DIRECTIVES } from 'angular2/router';
 
-import {SpotifySrv} from './spotify';
+import {SpotifySrv} from '../spotify';
+import {SpotifyResults} from './results';
 
 interface IResultImage {
   width: number,
@@ -19,19 +21,21 @@ interface IResultImage {
   viewBindings: [SpotifySrv]
 })
 @View({
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES],
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES ],
   template: `
   <div>
     <div class="Search">
       <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control Search-query"
-        (keyup)="searchFieldKeyHandler($event, queryInput)" #queryInput />
+        (keyup)="searchFieldKeyHandler($event)" />
       <select name="type" [(ng-model)]="type" class="form-control Search-type">
         <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
           {{ type.label }}
         </option>
       </select>
-      <button (click)="query()" class="btn btn-default Search-btn" [disabled]="q.length === 0">Load results</button>
+      <a [router-link]="getRouterLinkConfFromQuery()"
+        class="btn btn-default Search-btn" [class.disabled]="q.length === 0">Load results</a>
     </div>
+
     <div class="SearchResults">
       <table class="table table-striped" *ng-if="results">
         <thead>
@@ -73,17 +77,20 @@ export class SpotifySearch{
   types: Array<{value: string, label: string}>;
   results: any;
 
-  constructor(public spotify: SpotifySrv) {
-    this.q = '';
-    this.type = 'albums'; // default type
+  constructor(public spotify: SpotifySrv, public params: RouteParams, public router: Router,
+              public location: Location) {
+    this.q = params.get('query') || '';
+    this.type = params.get('type') || 'albums'; // default type
     this.types = [
       {value: 'artists', label: 'Artist'},
       {value: 'albums', label: 'Album'},
-      //{value: 'artists+albums', label: 'Artist + Album'},
     ];
     this.results = null;
 
     this.searchFieldKeyHandler = this.searchFieldKeyHandler.bind(this);
+    if (this.q.length > 0 && !this.results) {
+      this.query();
+    }
   }
 
   /**
@@ -103,7 +110,7 @@ export class SpotifySearch{
   /**
    * Construct a router link for a given Spotify URI.
    * @param uri {string} Spotify URI
-   * @returns {any} Route representation that is consumable by the "router-link" attribute of angular's router.
+   * @returns {any} Route representation that is consumable by RouterLink directive of the router.
    */
   getRouterLinkForUri(uri: string) {
     const parts = uri.split(':');
@@ -140,6 +147,14 @@ export class SpotifySearch{
   }
 
   /**
+   * Build the configuration for the RouterLink component for a detailed search from the input query.
+   * @returns {any} Route representation that is consumable by RouterLink directive of the router.
+   */
+  getRouterLinkConfFromQuery() {
+    return ['/search-type-query', {type: this.type, query: this.q}];
+  }
+
+  /**
    * Generic query method that queries the Spotify service based on the `type` that the user has selected in the UI.
    */
   query() {
@@ -152,11 +167,13 @@ export class SpotifySearch{
   /**
    * Handler for key presses in the search query field.
    * @param event {KeyboardEvent} Keyboard event
-   * @param query {HTMLInputElement} Input element that fired the event
    */
-  searchFieldKeyHandler(event, query) {
+  searchFieldKeyHandler(event: KeyboardEvent) {
     if (event.keyCode === 13 && this.q.length > 0) {
-      this.query();
+      // Find out the target URL, which can be generated via the router.
+      // TODO: there should be a less verbose and less complicated way to do this, right?
+      let navigationInstruction = this.router.generate(this.getRouterLinkConfFromQuery());
+      this.location.go('/' + navigationInstruction.component.urlPath);
     }
   }
 
