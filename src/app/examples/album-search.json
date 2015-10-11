@@ -1,0 +1,491 @@
+{
+  "albums" : {
+    "href" : "https://api.spotify.com/v1/search?query=soave&offset=0&limit=20&type=album",
+    "items" : [ {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/2J5X59AsXJXsmsy3ksTtog"
+      },
+      "href" : "https://api.spotify.com/v1/albums/2J5X59AsXJXsmsy3ksTtog",
+      "id" : "2J5X59AsXJXsmsy3ksTtog",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/effbf1aa12993bbe1cf8f53ee00c92139a30bd47",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/cdd3add2c053eb39d560cb369feaa0c7947fdc28",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/b9755f01f3804882e87e800d02181681838668d9",
+        "width" : 64
+      } ],
+      "name" : "Soave",
+      "type" : "album",
+      "uri" : "spotify:album:2J5X59AsXJXsmsy3ksTtog"
+    }, {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/2UREm8nSZNQixlakUwnMpR"
+      },
+      "href" : "https://api.spotify.com/v1/albums/2UREm8nSZNQixlakUwnMpR",
+      "id" : "2UREm8nSZNQixlakUwnMpR",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/cb8e8704b80310827fc15ed02325918c562f7569",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/778eb42dc37dfbe927f779640b606cff32cbfb67",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/47dd6bb84499f17e45a6bcd3d21f7be53dfbcaf8",
+        "width" : 64
+      } ],
+      "name" : "Soave",
+      "type" : "album",
+      "uri" : "spotify:album:2UREm8nSZNQixlakUwnMpR"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/34ipNUAPWolLFJ4yM0KwTa"
+      },
+      "href" : "https://api.spotify.com/v1/albums/34ipNUAPWolLFJ4yM0KwTa",
+      "id" : "34ipNUAPWolLFJ4yM0KwTa",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/f61f9e06ecfed569e97f65fdbf263682985176c5",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/3897a3a9b5130fcbe9987b8f29362003feab2469",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/eb57b5059565cc9785e6eee178963d249e1bf70f",
+        "width" : 64
+      } ],
+      "name" : "Soave",
+      "type" : "album",
+      "uri" : "spotify:album:34ipNUAPWolLFJ4yM0KwTa"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3WAgNf2LEIUS1Zbb2507x4"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3WAgNf2LEIUS1Zbb2507x4",
+      "id" : "3WAgNf2LEIUS1Zbb2507x4",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/284108d71a724e04feaa77720a297e4f7536dc5b",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/9fa1dcf9f2f7f6a4efed5631292cf0b1bef3513f",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/842ecc8f1a0520d3740a5df3c93f6e3250a462c8",
+        "width" : 64
+      } ],
+      "name" : "Soave",
+      "type" : "album",
+      "uri" : "spotify:album:3WAgNf2LEIUS1Zbb2507x4"
+    }, {
+      "album_type" : "compilation",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/2y6ukwZeSmkBU2o56crcmn"
+      },
+      "href" : "https://api.spotify.com/v1/albums/2y6ukwZeSmkBU2o56crcmn",
+      "id" : "2y6ukwZeSmkBU2o56crcmn",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/9f0ec6591c3c6e83c36720bbfedd7cb1f8e1e19b",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/fc51b0d943f8ffa0121e46bd889c0aabe9027708",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/16241526007aab6962868842dc701fabcedead03",
+        "width" : 64
+      } ],
+      "name" : "Soave pensiero",
+      "type" : "album",
+      "uri" : "spotify:album:2y6ukwZeSmkBU2o56crcmn"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4HnDRV6V9vZLrYnWglzJU4"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4HnDRV6V9vZLrYnWglzJU4",
+      "id" : "4HnDRV6V9vZLrYnWglzJU4",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/19531e8c1ebf58d21c1e0f62c8f243e66222763a",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/63924dc0a950f276168cdf32f4e9b59ac053a8f3",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/cfd28c4bbff0280b4d6e93db503ca98636917ead",
+        "width" : 64
+      } ],
+      "name" : "Escaping",
+      "type" : "album",
+      "uri" : "spotify:album:4HnDRV6V9vZLrYnWglzJU4"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3LFlWDASHgwvgZH9Ed6YHi"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3LFlWDASHgwvgZH9Ed6YHi",
+      "id" : "3LFlWDASHgwvgZH9Ed6YHi",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/47c5b1a9d3928a1768b1c6937c5770a7559eef18",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/262869898e31023e40183b33f38dbad4681a8f67",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/f62d6b015d347ca5c63c5550dd890bcdb7919753",
+        "width" : 64
+      } ],
+      "name" : "Un soave pensiero",
+      "type" : "album",
+      "uri" : "spotify:album:3LFlWDASHgwvgZH9Ed6YHi"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3z3IVTBbR0Hlo2wJbkArnC"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3z3IVTBbR0Hlo2wJbkArnC",
+      "id" : "3z3IVTBbR0Hlo2wJbkArnC",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/ddc2b560530cfa6934b0b518f152ce633b83c698",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ed02cc268a009b95975925078da780a000a8e13c",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/610beba4d516d727037a083fe499f37dece5b80c",
+        "width" : 64
+      } ],
+      "name" : "Soave Part 2",
+      "type" : "album",
+      "uri" : "spotify:album:3z3IVTBbR0Hlo2wJbkArnC"
+    }, {
+      "album_type" : "album",
+      "available_markets" : [ "AR", "BO", "BR", "CA", "CL", "CO", "CR", "DO", "EC", "GT", "HN", "MX", "NI", "PA", "PE", "PY", "SV", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/1FOrjOQxzRZO8V2HSPOBGP"
+      },
+      "href" : "https://api.spotify.com/v1/albums/1FOrjOQxzRZO8V2HSPOBGP",
+      "id" : "1FOrjOQxzRZO8V2HSPOBGP",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/bf25d36930a6a9f047ed378991475bb97a7dea09",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ff41a701ae40191a82f26e743f2b7ac03e4c0c4d",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/1e2fd4351b570e840b4964c97a46114a646b05b6",
+        "width" : 64
+      } ],
+      "name" : "Zefiro soave vol. 1",
+      "type" : "album",
+      "uri" : "spotify:album:1FOrjOQxzRZO8V2HSPOBGP"
+    }, {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/75qEFVi65FPxRX29nqxbJh"
+      },
+      "href" : "https://api.spotify.com/v1/albums/75qEFVi65FPxRX29nqxbJh",
+      "id" : "75qEFVi65FPxRX29nqxbJh",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/b7aabc8661327b9b9f1ba21c53a116418941a0a4",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/e5556b4763836dbec7a81588a458b3ba4049076b",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/9b427fba1630cdc8d0bf86584c38f45de6356b21",
+        "width" : 64
+      } ],
+      "name" : "Platinum Era",
+      "type" : "album",
+      "uri" : "spotify:album:75qEFVi65FPxRX29nqxbJh"
+    }, {
+      "album_type" : "compilation",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/1bAB0eozXTqo48pCAS2Boc"
+      },
+      "href" : "https://api.spotify.com/v1/albums/1bAB0eozXTqo48pCAS2Boc",
+      "id" : "1bAB0eozXTqo48pCAS2Boc",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/f7988a4d8c38d57010c1b365e74618223abd4b29",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/0bb6160b31cfeaa588b93560c37ff94bf654d28c",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/a62f691a030f24a00f14b3a73edffc44f5da791f",
+        "width" : 64
+      } ],
+      "name" : "Snow",
+      "type" : "album",
+      "uri" : "spotify:album:1bAB0eozXTqo48pCAS2Boc"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/5RhtgAF3MxM9crzxsov0cs"
+      },
+      "href" : "https://api.spotify.com/v1/albums/5RhtgAF3MxM9crzxsov0cs",
+      "id" : "5RhtgAF3MxM9crzxsov0cs",
+      "images" : [ {
+        "height" : 600,
+        "url" : "https://i.scdn.co/image/979a1cdafc43ec9db18a41a462a9f7763d1bd055",
+        "width" : 600
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/9055b9d67f896e842b9595606fddfc679d679dce",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/2a5ed4aee099e13072f173f58cdeac21ae90d5fe",
+        "width" : 64
+      } ],
+      "name" : "Holy Shit E.P.",
+      "type" : "album",
+      "uri" : "spotify:album:5RhtgAF3MxM9crzxsov0cs"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/422T5ONBVjLbI7aQSJALh7"
+      },
+      "href" : "https://api.spotify.com/v1/albums/422T5ONBVjLbI7aQSJALh7",
+      "id" : "422T5ONBVjLbI7aQSJALh7",
+      "images" : [ {
+        "height" : 600,
+        "url" : "https://i.scdn.co/image/0206854dd9ba12963ab869eb32710513d46c6d19",
+        "width" : 600
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/09409ed080dac2558f64db255041cfb92a1c3d54",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/9cd139f2048d5e2306164252a6742186085f840c",
+        "width" : 64
+      } ],
+      "name" : "Tom's Diner 2009",
+      "type" : "album",
+      "uri" : "spotify:album:422T5ONBVjLbI7aQSJALh7"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3kO6opGUP6Vo0EtAcYUb9w"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3kO6opGUP6Vo0EtAcYUb9w",
+      "id" : "3kO6opGUP6Vo0EtAcYUb9w",
+      "images" : [ {
+        "height" : 600,
+        "url" : "https://i.scdn.co/image/6f4108a6b7a2dcecde0b675b66a8f9e2797311d6",
+        "width" : 600
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ee0decfebd236f39834b21605de36ae3eca2492a",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/9639c87b57165d29e9d0a6daddcb4df3e9a0a638",
+        "width" : 64
+      } ],
+      "name" : "Geisha",
+      "type" : "album",
+      "uri" : "spotify:album:3kO6opGUP6Vo0EtAcYUb9w"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/0eKwkRrZfYjRlnRFbwi8J1"
+      },
+      "href" : "https://api.spotify.com/v1/albums/0eKwkRrZfYjRlnRFbwi8J1",
+      "id" : "0eKwkRrZfYjRlnRFbwi8J1",
+      "images" : [ {
+        "height" : 600,
+        "url" : "https://i.scdn.co/image/32be07a839df99f39bd347cf3b99a7819a1a2b4d",
+        "width" : 600
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/051f5c5e6a31d4634c53ebc36a97b123c30f2412",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/98586541e4428676ffb07d869efd4aff7d22554f",
+        "width" : 64
+      } ],
+      "name" : "Killer Herz",
+      "type" : "album",
+      "uri" : "spotify:album:0eKwkRrZfYjRlnRFbwi8J1"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/6P0PRjFyPQKnU6RpAMZIj4"
+      },
+      "href" : "https://api.spotify.com/v1/albums/6P0PRjFyPQKnU6RpAMZIj4",
+      "id" : "6P0PRjFyPQKnU6RpAMZIj4",
+      "images" : [ {
+        "height" : 600,
+        "url" : "https://i.scdn.co/image/7cc5ca59d74c61618dbbc04b69b7632883a75e6d",
+        "width" : 600
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/b4942181de4181cfc32c5d8d1ca14f3cc56bdfb3",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/e6d525dd0dd856d4e58e5b4498e4122eb3affe5c",
+        "width" : 64
+      } ],
+      "name" : "Over the Rainbow",
+      "type" : "album",
+      "uri" : "spotify:album:6P0PRjFyPQKnU6RpAMZIj4"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/5I9Lpx8uCcDty9kQWIT89S"
+      },
+      "href" : "https://api.spotify.com/v1/albums/5I9Lpx8uCcDty9kQWIT89S",
+      "id" : "5I9Lpx8uCcDty9kQWIT89S",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/d86b58cdddc55693acf4602439528444e3c60f64",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/13b3900fdc1e609bc6e3bc74895b8de960597f4f",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/c0b472d0534352cd3ae0373ec813f0540c9b5e50",
+        "width" : 64
+      } ],
+      "name" : "Lightning EP",
+      "type" : "album",
+      "uri" : "spotify:album:5I9Lpx8uCcDty9kQWIT89S"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/7IcSVmIWCoAjtXr3ZfeNP4"
+      },
+      "href" : "https://api.spotify.com/v1/albums/7IcSVmIWCoAjtXr3ZfeNP4",
+      "id" : "7IcSVmIWCoAjtXr3ZfeNP4",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/85ba0e7f4f8d57c4f8da176b33161aa2aa5a87ac",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/6333086b16a336bff19f7dd231a1b9c04c20decf",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/667572616e59daa3dfb8be55e3695e11a560e60c",
+        "width" : 64
+      } ],
+      "name" : "Bom! E.P.",
+      "type" : "album",
+      "uri" : "spotify:album:7IcSVmIWCoAjtXr3ZfeNP4"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4ZklIHEkuPw2iwzcyKMxxc"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4ZklIHEkuPw2iwzcyKMxxc",
+      "id" : "4ZklIHEkuPw2iwzcyKMxxc",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/757904f2540f776f5edfa62ca261c481d8c35b1b",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/8ae5fc446bac02a417dac0d9352c5a8b588743b7",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/96662ec2677bccf3f9ed115815799638b7374e8f",
+        "width" : 64
+      } ],
+      "name" : "Dream Up EP",
+      "type" : "album",
+      "uri" : "spotify:album:4ZklIHEkuPw2iwzcyKMxxc"
+    }, {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/61rshJE4KzEzaGDmDktoIT"
+      },
+      "href" : "https://api.spotify.com/v1/albums/61rshJE4KzEzaGDmDktoIT",
+      "id" : "61rshJE4KzEzaGDmDktoIT",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/e320106ca405fdf6a4571738415349407ed42b19",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/19fcd4c25ef22a73e75bc4382a0271b596648c5f",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/d280aec651c95fefb6540cffb316f7607cdf70e1",
+        "width" : 64
+      } ],
+      "name" : "Roar",
+      "type" : "album",
+      "uri" : "spotify:album:61rshJE4KzEzaGDmDktoIT"
+    } ],
+    "limit" : 20,
+    "next" : "https://api.spotify.com/v1/search?query=soave&offset=20&limit=20&type=album",
+    "offset" : 0,
+    "previous" : null,
+    "total" : 52
+  }
+}

@@ -7,7 +7,7 @@ import {SpotifySrv} from '../spotify';
 import {CueGenerator} from '../../lib/cue-generator';
 
 // Sample data used during development
-//const exampleAlbumData = require('../../examples/album-detail.json');
+const exampleAlbumData = require('../../examples/album-detail.json');
 
 /**
  * Extend the interface of a track, such that it can be toggled.
@@ -186,6 +186,16 @@ export class SpotifyAlbumDetail {
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
+  }
+
+  isAvailableInHomeCountry(markets, homeCountry = 'DE') {
+    return _.any(_.map(markets, m => m === homeCountry));
+  }
+
+  getDiskTotalLength(trackItems: ISpotifyAPITrackToggleable[]) {
+    let checkedItems = _.filter(trackItems, item => item._isChecked);
+    return _.sum(_.pluck(checkedItems, 'duration_ms'));
+
   }
 
 }

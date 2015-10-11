@@ -15,16 +15,22 @@
     <table class="table table-striped" *ng-if="results">
       <thead>
       <tr>
-        <th>Cover</th>
+        <th class="cover">Cover</th>
         <th>Albumtitle</th>
         <th>Reference</th>
       </tr>
       <tbody>
       <tr *ng-for="#item of results.items">
-        <td>
+        <td
+          [class.available]="isAvailableInHomeCountry(item.available_markets)"
+          [class.not-available]="!isAvailableInHomeCountry(item.available_markets)"
+          >
           <img [src]="getImageUrl(item.images)" alt="image" />
         </td>
-        <td>{{ item.name }}</td>
+        <td>
+          <div><a [router-link]="getRouterLinkForUri(item.uri)">{{ item.name }}</a></div>
+          <span class="badge badge--{{item.album_type}}">{{ item.album_type}}</span>
+        </td>
         <td class="text-center">
           <a [router-link]="getRouterLinkForUri(item.uri)" class="reference">
             <i class="glyphicon glyphicon-chevron-right"></i>

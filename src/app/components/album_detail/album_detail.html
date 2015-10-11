@@ -14,8 +14,9 @@
               <a [router-link]="['/artist-detail', {id: artist.id}]">{{ artist.name }}</a>
             </li>
           </ul>
-          <ul class="market">
-            <li *ng-for="#market of result.available_markets">
+          <ul class="MarketList MarketList--small">
+            <li *ng-for="#market of result.available_markets"
+                [class.available]="market === 'DE'">
               {{ market }}
             </li>
           </ul>
@@ -53,6 +54,16 @@
           </td>
         </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th class="text-center">{{ getDiskTotalLength(tracksByDisks[disk]) | duration }}</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </tfoot>
       </table>
     </div>
     <div class="text-center">

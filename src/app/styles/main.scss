@@ -1,24 +1,21 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+$colschema-album: #ffa069;
+$colschema-single: #488dff;
+$colschema-compilation: #c580ff;
+
+.u-textSmall { font-size: .8em; }
+
+.badge--album { background-color: $colschema-album; }
+.badge--single { background-color: $colschema-single; }
+.badge--compilation {background-color: $colschema-compilation; }
+
 main { margin-bottom: $grid-gutter-width; }
 .navbar { border-radius: 0; }
 .Album {}
 .AlbumMeta {
   .headline { margin-top: 0; }
-  .market {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    & > li {
-      display: inline-block;
-      padding: .2em;
-      margin-right: .5em;
-      background-color: #efefef;
-      margin-bottom: .5em;
-      border-radius: 3px;
-    }
-  }
   .artist {
     list-style: none;
     margin: .5em 0;
@@ -46,6 +43,32 @@ main { margin-bottom: $grid-gutter-width; }
 
 .SearchResults {
   .table>tbody>tr>td { vertical-align: middle; }
+  .table th,
+  .table td {
+    &.available,
+    &.not-available {
+      border-left: 3px solid transparent;
+    }
+    &.available { border-left-color: orange; }
+    &.not-available { border-left-color: rgba(95, 95, 95, 0.6); }
+    &.cover { width: 100px; }
+  }
   .reference { padding: 2em; }
   .no-results-info { margin: 1em 0; }
+  //.market { margin: .5em 0; }
+}
+
+.MarketList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  & > li {
+    display: inline-block;
+    padding: .2em;
+    margin-right: .5em;
+    background-color: #efefef;
+    margin-bottom: .5em;
+    border-radius: 3px;
+    &.available { background-color: orange; }
+  }
 }

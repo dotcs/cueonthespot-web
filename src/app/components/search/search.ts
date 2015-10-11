@@ -6,6 +6,8 @@ import {ROUTER_DIRECTIVES } from 'angular2/router';
 
 import {SpotifySrv} from '../spotify';
 
+let exampleAlbumSearch = require('../../examples/album-search.json');
+
 interface IResultImage {
   width: number,
   height: number,
@@ -115,10 +117,23 @@ export class SpotifySearch{
    * Generic query method that queries the Spotify service based on the `type` that the user has selected in the UI.
    */
   query() {
+    //this._fakeQuery(this.type); // debug
+    //return null; // debug
     this.spotify.query(this.type, this.q)
       .subscribe(results => {
         this.results = results[this.type];
       });
+  }
+
+  _fakeQuery(type: string) {
+    switch (type) {
+      case 'albums':
+        this.results = exampleAlbumSearch[this.type];
+        break;
+      default:
+        this.results = [];
+        break;
+    }
   }
 
   /**
@@ -133,6 +148,10 @@ export class SpotifySearch{
       this.location.go('/' + navigationInstruction.component.urlPath);
       this.query();
     }
+  }
+
+  isAvailableInHomeCountry(markets, homeCountry = 'DE') {
+    return _.any(_.map(markets, m => m === homeCountry));
   }
 
 }
