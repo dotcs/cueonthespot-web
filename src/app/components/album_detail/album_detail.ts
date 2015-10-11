@@ -7,7 +7,7 @@ import {SpotifySrv} from '../spotify';
 import {CueGenerator} from '../../lib/cue-generator';
 
 // Sample data used during development
-const exampleAlbumData = require('../../examples/album-detail.json');
+//const exampleAlbumData = require('../../examples/album-detail.json');
 
 /**
  * Extend the interface of a track, such that it can be toggled.
@@ -50,6 +50,8 @@ export class DurationPipe {
 })
 export class SpotifyAlbumDetail {
   result: ISpotifyAPIAlbum;
+  disks: String[];
+  tracksByDisks: {[index: string]: ISpotifyAPITrackToggleable[]};
 
   constructor(public spotify: SpotifySrv, params: RouteParams) {
     this.result = null;
@@ -60,13 +62,22 @@ export class SpotifyAlbumDetail {
 
       // prepare checkbox support
       this.toggleAllTrackItems(<ISpotifyAPITrackToggleable[]>this.result.tracks.items, true);
+
+      // extract the disk information
+      this.tracksByDisks = this.groupTracksByDiscs(<ISpotifyAPITrackToggleable[]>this.result.tracks.items);
+      this.disks = Object.keys(this.tracksByDisks);
     });
 
-    //const id = '0sNOF9WDwhWunNAHPD3Baj';
+    // FOR DEBUGGING ONLY
+    // =========
     //this.result = exampleAlbumData;
-    // prepare checkbox support
+    //// prepare checkbox support
     //this.toggleAllTrackItems(<ISpotifyAPITrackToggleable[]>this.result.tracks.items, true);
-
+    //
+    //// extract the disk information
+    //this.tracksByDisks = this.groupTracksByDiscs(<ISpotifyAPITrackToggleable[]>this.result.tracks.items);
+    //this.disks = Object.keys(this.tracksByDisks);
+    // END DEBUGGING ===========
   }
 
   /**
@@ -107,7 +118,7 @@ export class SpotifyAlbumDetail {
     }
   }
 
-  groupTracksByDiscs(trackItems: ISpotifyAPITrackToggleable[]) {
+  groupTracksByDiscs(trackItems: ISpotifyAPITrackToggleable[]): {[index: string]: ISpotifyAPITrackToggleable[]} {
     const grouped = _.groupBy(trackItems, 'disc_number');
     return grouped;
   }
@@ -152,9 +163,13 @@ export class SpotifyAlbumDetail {
    * Generate the CUE sheet based on the checked track items and prompt the user to download the CUE sheet.
    */
   downloadCueSheet() {
-    const { artists, name, release_date, tracks } = this.result;
-    let generator = new CueGenerator(_.map(artists, artist => artist.name).join(', '), name, release_date, 1);
-    generator.addDisk(1, _.filter(<ISpotifyAPITrackToggleable[]>tracks.items, item => item._isChecked));
+    const { artists, name, release_date } = this.result;
+    let generator = new CueGenerator(_.map(artists, artist => artist.name).join(', '), name, release_date,
+      this.disks.length);
+    this.disks.forEach(index => {
+      let tracks = this.tracksByDisks[<string>index];
+      generator.addDisk(+index, _.filter(tracks, item => item._isChecked));
+    });
     console.log(generator.getCueSheet());
     generator.downloadCueSheet();
   }

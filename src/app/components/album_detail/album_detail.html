@@ -23,27 +23,30 @@
       </div>
     </div>
     <div class="album">
-      <table class="table table-striped">
+      <table class="table table-striped" *ng-for="#disk of disks">
         <thead>
         <tr>
+          <th colspan="6" class="text-center">Disk #{{ disk }}</th>
+        </tr>
+        <tr>
           <th class="text-center"><input type="checkbox"
-                                         [ng-model]="allTrackItemsChecked(result.tracks.items)"
-                                         (click)="toggleAllTrackItems(result.tracks.items)"/></th>
+                                         [ng-model]="allTrackItemsChecked(tracksByDisks[disk])"
+                                         (click)="toggleAllTrackItems(tracksByDisks[disk])"/></th>
           <th class="text-center">Track number</th>
           <th>Name</th>
           <th class="text-center">Duration</th>
           <th class="text-center">Explicit</th>
-          <th class="text-center" *ng-if="anyTrackHasPreview(result.tracks.items)">Preview</th>
+          <th class="text-center" *ng-if="anyTrackHasPreview(tracksByDisks[disk])">Preview</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ng-for="#item of result.tracks.items">
+        <tr *ng-for="#item of tracksByDisks[disk]">
           <td class="text-center"><input type="checkbox" [(ng-model)]="item._isChecked" [checked]="item._isChecked" /></td>
           <td class="text-center">{{ item.track_number }}</td>
           <td>{{ item.name }}</td>
           <td class="text-center">{{ item.duration_ms | duration }}</td>
           <td class="text-center"><i class="glyphicon {{ item.explicit ? 'glyphicon-ok' : 'glyphicon-remove'}}"></i></td>
-          <td class="text-center" *ng-if="anyTrackHasPreview(result.tracks.items)">
+          <td class="text-center" *ng-if="anyTrackHasPreview(tracksByDisks[disk])">
             <a [href]="item.preview_url" target="_blank" *ng-if="item.preview_url !== null">
               <i class="glyphicon glyphicon-music"></i>
             </a>

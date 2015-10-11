@@ -1,0 +1,558 @@
+{
+  "album_type" : "album",
+  "artists" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+    },
+    "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+    "id" : "7e52Ytzjj1q71DUj2cSlch",
+    "name" : "Sarah Connor",
+    "type" : "artist",
+    "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+  } ],
+  "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+  "copyrights" : [ {
+    "text" : "(C) 2015 Miss Cee Publishing GmbH, under exclusive license to Polydor/Island, a division of Universal Music GmbH",
+    "type" : "C"
+  }, {
+    "text" : "(P) 2015 Miss Cee Publishing GmbH, under exclusive license to Polydor/Island, a division of Universal Music GmbH",
+    "type" : "P"
+  } ],
+  "external_ids" : {
+    "upc" : "00602547337979"
+  },
+  "external_urls" : {
+    "spotify" : "https://open.spotify.com/album/3ZpOEFd7RgKIcdWOqrzOAc"
+  },
+  "genres" : [ ],
+  "href" : "https://api.spotify.com/v1/albums/3ZpOEFd7RgKIcdWOqrzOAc",
+  "id" : "3ZpOEFd7RgKIcdWOqrzOAc",
+  "images" : [ {
+    "height" : 640,
+    "url" : "https://i.scdn.co/image/5c7beff3f8518d8c5c357283b79936e5d91a6c72",
+    "width" : 640
+  }, {
+    "height" : 300,
+    "url" : "https://i.scdn.co/image/5a7393f96c638cbb8d1c5586dd0f167e45b07280",
+    "width" : 300
+  }, {
+    "height" : 64,
+    "url" : "https://i.scdn.co/image/1ba3c097aec3973b9bdf26813f714422f1006cde",
+    "width" : 64
+  } ],
+  "name" : "Muttersprache (Deluxe Version)",
+  "popularity" : 67,
+  "release_date" : "2015-05-22",
+  "release_date_precision" : "day",
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/albums/3ZpOEFd7RgKIcdWOqrzOAc/tracks?offset=0&limit=50",
+    "items" : [ {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 228959,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1jjNd3bUUSNjq3NpEUax7m"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1jjNd3bUUSNjq3NpEUax7m",
+      "id" : "1jjNd3bUUSNjq3NpEUax7m",
+      "name" : "Mit vollen Händen",
+      "preview_url" : "https://p.scdn.co/mp3-preview/61f405d64030d02fc96fb74d5c1c363f7506a59e",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:1jjNd3bUUSNjq3NpEUax7m"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 218546,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2xtnnO9bHKXEmsfetO3ldK"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2xtnnO9bHKXEmsfetO3ldK",
+      "id" : "2xtnnO9bHKXEmsfetO3ldK",
+      "name" : "Wie schön du bist",
+      "preview_url" : "https://p.scdn.co/mp3-preview/2074bc47950e0b10bf5870adbaefb3ee78d6c000",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:2xtnnO9bHKXEmsfetO3ldK"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 190746,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2H23NnzxP9NezcNSxMWfw4"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2H23NnzxP9NezcNSxMWfw4",
+      "id" : "2H23NnzxP9NezcNSxMWfw4",
+      "name" : "Halt mich",
+      "preview_url" : "https://p.scdn.co/mp3-preview/5c54d107ca5dadb17bf1b7be4aa64009972e8e36",
+      "track_number" : 3,
+      "type" : "track",
+      "uri" : "spotify:track:2H23NnzxP9NezcNSxMWfw4"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 232532,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2GsApGGaZ8nyBE5kahG2VO"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2GsApGGaZ8nyBE5kahG2VO",
+      "id" : "2GsApGGaZ8nyBE5kahG2VO",
+      "name" : "Bedingungslos",
+      "preview_url" : "https://p.scdn.co/mp3-preview/b44af92645d04d176dcb12e851fa4c3b98191956",
+      "track_number" : 4,
+      "type" : "track",
+      "uri" : "spotify:track:2GsApGGaZ8nyBE5kahG2VO"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 204932,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5izoj27lxNzJCwY1BvAyhw"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5izoj27lxNzJCwY1BvAyhw",
+      "id" : "5izoj27lxNzJCwY1BvAyhw",
+      "name" : "Kommst Du mit ihr",
+      "preview_url" : "https://p.scdn.co/mp3-preview/e83a9ab14dd27f3d8ad9cf9b96a1ea54adedb629",
+      "track_number" : 5,
+      "type" : "track",
+      "uri" : "spotify:track:5izoj27lxNzJCwY1BvAyhw"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 253186,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1666tn3j1nGpIQ9EtQXPRM"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1666tn3j1nGpIQ9EtQXPRM",
+      "id" : "1666tn3j1nGpIQ9EtQXPRM",
+      "name" : "Mein König",
+      "preview_url" : "https://p.scdn.co/mp3-preview/d4defcb76f67e978f3d4ea3c17ab698bfc80f9c0",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:1666tn3j1nGpIQ9EtQXPRM"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 270679,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2sbpr7ny2rJ8rYQisuy83Q"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2sbpr7ny2rJ8rYQisuy83Q",
+      "id" : "2sbpr7ny2rJ8rYQisuy83Q",
+      "name" : "Augen auf",
+      "preview_url" : "https://p.scdn.co/mp3-preview/46213efb2c72931538c9e33a4f804f58a125192e",
+      "track_number" : 7,
+      "type" : "track",
+      "uri" : "spotify:track:2sbpr7ny2rJ8rYQisuy83Q"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 286132,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2pglKNd7sW1wUpvXP5AtsI"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2pglKNd7sW1wUpvXP5AtsI",
+      "id" : "2pglKNd7sW1wUpvXP5AtsI",
+      "name" : "Deutsches Liebeslied",
+      "preview_url" : "https://p.scdn.co/mp3-preview/2cc28fbfdcd84050ebf17ec49aa827f2acfc1e13",
+      "track_number" : 8,
+      "type" : "track",
+      "uri" : "spotify:track:2pglKNd7sW1wUpvXP5AtsI"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 227252,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/20qbgGi5iIgW8t573huQOE"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/20qbgGi5iIgW8t573huQOE",
+      "id" : "20qbgGi5iIgW8t573huQOE",
+      "name" : "Versprochen",
+      "preview_url" : "https://p.scdn.co/mp3-preview/b5fce39dfd72ccd07acd19a1facf0d3f937b57ef",
+      "track_number" : 9,
+      "type" : "track",
+      "uri" : "spotify:track:20qbgGi5iIgW8t573huQOE"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 242826,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0LIPNSoCbDF5e1FS9jXAgO"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0LIPNSoCbDF5e1FS9jXAgO",
+      "id" : "0LIPNSoCbDF5e1FS9jXAgO",
+      "name" : "Anorak",
+      "preview_url" : "https://p.scdn.co/mp3-preview/655d0e885b9ad4f745b8ad5cee97686ab992dfcb",
+      "track_number" : 10,
+      "type" : "track",
+      "uri" : "spotify:track:0LIPNSoCbDF5e1FS9jXAgO"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 170119,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1muZvvrvHeqvIHYzYsv9KS"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1muZvvrvHeqvIHYzYsv9KS",
+      "id" : "1muZvvrvHeqvIHYzYsv9KS",
+      "name" : "Meine Insel",
+      "preview_url" : "https://p.scdn.co/mp3-preview/3401dcc61bd5e1175abe517d2a774aad0565fa71",
+      "track_number" : 11,
+      "type" : "track",
+      "uri" : "spotify:track:1muZvvrvHeqvIHYzYsv9KS"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 204599,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/6KndYjmS8yaaDRmJ07Cyr3"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/6KndYjmS8yaaDRmJ07Cyr3",
+      "id" : "6KndYjmS8yaaDRmJ07Cyr3",
+      "name" : "Wenn Du da bist",
+      "preview_url" : "https://p.scdn.co/mp3-preview/a1b37006033489277d02ab366b497e6f0d572d7b",
+      "track_number" : 12,
+      "type" : "track",
+      "uri" : "spotify:track:6KndYjmS8yaaDRmJ07Cyr3"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 197532,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/7J9FzPnO35V3MQKxvxU1ZD"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/7J9FzPnO35V3MQKxvxU1ZD",
+      "id" : "7J9FzPnO35V3MQKxvxU1ZD",
+      "name" : "Das Leben ist schön",
+      "preview_url" : "https://p.scdn.co/mp3-preview/b0a14fef7a0706c5f945557954e37d14c5e859ac",
+      "track_number" : 13,
+      "type" : "track",
+      "uri" : "spotify:track:7J9FzPnO35V3MQKxvxU1ZD"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 2,
+      "duration_ms" : 254906,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/18rYRo4Xn6gHmw2QRg2Sjm"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/18rYRo4Xn6gHmw2QRg2Sjm",
+      "id" : "18rYRo4Xn6gHmw2QRg2Sjm",
+      "name" : "Wie geht glücklich",
+      "preview_url" : "https://p.scdn.co/mp3-preview/d63e27083eecaa2051bce195bf65c0a375b1a6a9",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:18rYRo4Xn6gHmw2QRg2Sjm"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 2,
+      "duration_ms" : 240239,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/348rpwxKnCXg6QawcCeyuP"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/348rpwxKnCXg6QawcCeyuP",
+      "id" : "348rpwxKnCXg6QawcCeyuP",
+      "name" : "Keiner ist wie Du - Aus Sing meinen Song - Das Tauschkonzert",
+      "preview_url" : "https://p.scdn.co/mp3-preview/c7b969e9f0ce3530cbfc462dadf9e9515a596418",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:348rpwxKnCXg6QawcCeyuP"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 2,
+      "duration_ms" : 197119,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0p81tCCTwUAQzDIlLF9ZmU"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0p81tCCTwUAQzDIlLF9ZmU",
+      "id" : "0p81tCCTwUAQzDIlLF9ZmU",
+      "name" : "Ich atme ein - Aus Sing meinen Song - Das Tauschkonzert",
+      "preview_url" : "https://p.scdn.co/mp3-preview/694757735ed5f0382fa79c1236e00992a68ecf5a",
+      "track_number" : 3,
+      "type" : "track",
+      "uri" : "spotify:track:0p81tCCTwUAQzDIlLF9ZmU"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 2,
+      "duration_ms" : 210132,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/6SVi1pb35tGLbc8YKNAWTA"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/6SVi1pb35tGLbc8YKNAWTA",
+      "id" : "6SVi1pb35tGLbc8YKNAWTA",
+      "name" : "I Feel Lonely - Aus Sing meinen Song - Das Tauschkonzert",
+      "preview_url" : "https://p.scdn.co/mp3-preview/394b8914c2b67f54ed6fa2327031aa4c1f246252",
+      "track_number" : 4,
+      "type" : "track",
+      "uri" : "spotify:track:6SVi1pb35tGLbc8YKNAWTA"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 2,
+      "duration_ms" : 183012,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/4iDzvcei2nB88bXpZjziHl"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/4iDzvcei2nB88bXpZjziHl",
+      "id" : "4iDzvcei2nB88bXpZjziHl",
+      "name" : "Unlove You",
+      "preview_url" : "https://p.scdn.co/mp3-preview/3626cb499de384a1b1dd4df9130c39fafd8c9ba3",
+      "track_number" : 5,
+      "type" : "track",
+      "uri" : "spotify:track:4iDzvcei2nB88bXpZjziHl"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 2,
+      "duration_ms" : 159772,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/4NpEKdWG69oO5jA1igES5b"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/4NpEKdWG69oO5jA1igES5b",
+      "id" : "4NpEKdWG69oO5jA1igES5b",
+      "name" : "Come Home",
+      "preview_url" : "https://p.scdn.co/mp3-preview/465d46574ac445a8a3dcd168080e5460c5bcfb7b",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:4NpEKdWG69oO5jA1igES5b"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7e52Ytzjj1q71DUj2cSlch"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7e52Ytzjj1q71DUj2cSlch",
+        "id" : "7e52Ytzjj1q71DUj2cSlch",
+        "name" : "Sarah Connor",
+        "type" : "artist",
+        "uri" : "spotify:artist:7e52Ytzjj1q71DUj2cSlch"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 2,
+      "duration_ms" : 211999,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/3jP7WC7CtjK1Jo1JwAeaWF"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/3jP7WC7CtjK1Jo1JwAeaWF",
+      "id" : "3jP7WC7CtjK1Jo1JwAeaWF",
+      "name" : "Close To Crazy",
+      "preview_url" : "https://p.scdn.co/mp3-preview/e3daa1d61bfe839d36f8721d41fb91dc0bc4208d",
+      "track_number" : 7,
+      "type" : "track",
+      "uri" : "spotify:track:3jP7WC7CtjK1Jo1JwAeaWF"
+    } ],
+    "limit" : 50,
+    "next" : null,
+    "offset" : 0,
+    "previous" : null,
+    "total" : 20
+  },
+  "type" : "album",
+  "uri" : "spotify:album:3ZpOEFd7RgKIcdWOqrzOAc"
+}
