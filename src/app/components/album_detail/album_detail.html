@@ -11,7 +11,7 @@
           <span>{{ result.release_date }}</span>
           <ul class="artist">
             <li *ng-for="#artist of result.artists">
-              <a href="#">{{ artist.name }}</a>
+              <a [router-link]="['/artist-detail', {id: artist.id}]">{{ artist.name }}</a>
             </li>
           </ul>
           <ul class="market">
