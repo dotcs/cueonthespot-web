@@ -4,7 +4,7 @@ import {RouteConfig, Router, RouteParams, Location } from 'angular2/router';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES } from 'angular2/router';
 
-import {SpotifySrv} from '../spotify';
+import {Spotify} from '../spotify';
 
 let exampleAlbumSearch = require('../../examples/album-search.json');
 
@@ -19,7 +19,6 @@ interface IResultImage {
  */
 @Component({
   selector: 'spotify-search',
-  viewBindings: [SpotifySrv]
 })
 @View({
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES ],
@@ -31,7 +30,7 @@ export class SpotifySearch{
   types: Array<{value: string, label: string}>;
   results: any;
 
-  constructor(public spotify: SpotifySrv, public params: RouteParams, public router: Router,
+  constructor(public Spotify: Spotify, public params: RouteParams, public router: Router,
               public location: Location) {
 
     var loadURIComponent = (name: string, fallback: string): string => {
@@ -98,7 +97,7 @@ export class SpotifySearch{
    */
   loadNextPage() {
     const { next } = this.results;
-    this.spotify.loadUrl(next).subscribe(results => {
+    this.Spotify.loadUrl(next).subscribe(results => {
       const { items } = this.results;
       this.results = results[this.type];
       this.results.items = items.concat(this.results.items);
@@ -119,7 +118,7 @@ export class SpotifySearch{
   query() {
     //this._fakeQuery(this.type); // debug
     //return null; // debug
-    this.spotify.query(this.type, this.q)
+    this.Spotify.query(this.type, this.q)
       .subscribe(results => {
         this.results = results[this.type];
       });

@@ -1,12 +1,8 @@
-import {Component} from 'angular2/angular2';
+import {Injectable} from 'angular2/di';
 import {Http} from 'angular2/http';
 
-import {CORE_DIRECTIVES} from 'angular2/angular2';
-
-@Component({
-  bindings: [CORE_DIRECTIVES]
-})
-export class SpotifySrv {
+@Injectable()
+export class Spotify {
   baseUrl: string;
 
   constructor(public http: Http) {

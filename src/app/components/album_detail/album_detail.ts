@@ -3,7 +3,7 @@ import {Component, View, Pipe} from 'angular2/angular2';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
 
-import {SpotifySrv} from '../spotify';
+import {Spotify} from '../spotify';
 import {CueGenerator} from '../../lib/cue-generator';
 
 // Sample data used during development
@@ -41,7 +41,6 @@ export class DurationPipe {
  */
 @Component({
   selector: 'spotify-album',
-  viewBindings: [SpotifySrv]
 })
 @View(<any>{ // FIXME: remove any as soon as Pipes do not make a problem in TS anymore
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES],
@@ -53,11 +52,11 @@ export class SpotifyAlbumDetail {
   disks: String[];
   tracksByDisks: {[index: string]: ISpotifyAPITrackToggleable[]};
 
-  constructor(public spotify: SpotifySrv, params: RouteParams) {
+  constructor(public Spotify: Spotify, params: RouteParams) {
     this.result = null;
 
     // query the album
-    spotify.queryAlbum(params.get('id')).subscribe(response => {
+    Spotify.queryAlbum(params.get('id')).subscribe(response => {
       this.result = response;
 
       // prepare checkbox support

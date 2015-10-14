@@ -19,6 +19,8 @@ import {App} from './app';
 require('./styles/bootstrap.scss');
 require('./styles/main.scss');
 
+import {Spotify} from './components/spotify';
+
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
  * our services/bindings into Angular's dependency injection
@@ -28,5 +30,6 @@ bootstrap(App, [
   FORM_BINDINGS,
   ROUTER_BINDINGS,
   HTTP_BINDINGS,
-  ELEMENT_PROBE_BINDINGS
+  ELEMENT_PROBE_BINDINGS,
+  Spotify
 ]);

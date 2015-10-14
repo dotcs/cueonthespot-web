@@ -56,5 +56,5 @@ class NotImplementedYet {
   `
 })
 export class App {
-  constructor(public http: Http) {}
+  constructor() {}
 }
