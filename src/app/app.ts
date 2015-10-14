@@ -22,7 +22,7 @@ import {SpotifyAlbumDetail} from 'app/components/album_detail/album_detail';
   directives: [],
   template: `
   <div class="alert alert-info">
-    This feature is not implemeted yet.
+    This feature is not implemented yet.
   </div>
   `
 })
