@@ -1,7 +1,9 @@
-import {Component, View} from 'angular2/angular2';
+import {Component, View, ChangeDetectionStrategy} from 'angular2/angular2';
 
 import {CORE_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES, Location} from 'angular2/router';
+
+import {Settings} from 'app/services/settings';
 
 /**
  * Navbar component
@@ -14,7 +16,13 @@ import {ROUTER_DIRECTIVES, Location} from 'angular2/router';
   template: require('to-string!./navbar.html')
 })
 export class Navbar {
-  constructor(public location: Location) {}
+  currentLanguageKey: any;
+  availableLanguages: any;
+
+  constructor(public location: Location, public settings: Settings) {
+    this.availableLanguages = settings.getAvailableLanguages();
+    this.currentLanguageKey = settings.getLanguage().key;
+  }
 
   /**
    * Find out if a given path matches the location's path.
@@ -24,6 +32,11 @@ export class Navbar {
    */
   getLinkStyle(path: string): boolean {
     return this.location.path() === path;
+  }
+
+  changeLanguage(newLanguageKey) {
+    this.settings.changeLanguage(newLanguageKey);
+    this.currentLanguageKey = newLanguageKey;
   }
 
 }

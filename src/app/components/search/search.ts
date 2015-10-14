@@ -4,6 +4,7 @@ import {RouteConfig, Router, RouteParams, Location } from 'angular2/router';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES } from 'angular2/router';
 
+import {Settings} from 'app/services/settings';
 import {Spotify} from 'app/services/spotify';
 
 interface IResultImage {
@@ -29,7 +30,7 @@ export class SpotifySearch{
   results: any;
 
   constructor(public Spotify: Spotify, public params: RouteParams, public router: Router,
-              public location: Location) {
+              public location: Location, public settings: Settings) {
 
     var loadURIComponent = (name: string, fallback: string): string => {
       return decodeURIComponent(params.get(name) || fallback);
@@ -134,8 +135,8 @@ export class SpotifySearch{
     }
   }
 
-  isAvailableInHomeCountry(markets, homeCountry = 'DE') {
-    return _.any(_.map(markets, m => m === homeCountry));
+  isAvailableInHomeCountry(markets, homeCountryCode = this.settings.getLanguage().key) {
+    return _.any(_.map(markets, m => m === homeCountryCode));
   }
 
 }

@@ -18,7 +18,7 @@
           </ul>
           <ul class="market__list market__list_small">
             <li *ng-for="#market of result.available_markets" class="market__entry"
-                [class.market__entry_available]="market === 'DE'">
+                [class.market__entry_available]="isHomeCountry(market)">
               {{ market }}
             </li>
           </ul>

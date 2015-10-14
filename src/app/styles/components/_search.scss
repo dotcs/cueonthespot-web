@@ -19,6 +19,7 @@
     .search__results-table-cell_available,
     .search__results-table-cell_not-available { border-left: 3px solid transparent; }
     .search__results-table-cell_available { border-left-color: $search-result-active-color; }
+    .search__results-table-cell_not-available { border-left-color: $search-result-inactive-color; }
     .search__results-table-cell_cover { width: 100px; }
   .search__results-table_no-results-info { margin: .5em 0; }
 

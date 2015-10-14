@@ -4,6 +4,7 @@ import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
 
 import {Spotify} from 'app/services/spotify';
+import {Settings} from 'app/services/settings';
 import {CueGenerator} from 'app/lib/cue-generator';
 
 /**
@@ -49,7 +50,7 @@ export class SpotifyAlbumDetail {
   disks: String[];
   tracksByDisks: {[index: string]: ISpotifyAPITrackToggleable[]};
 
-  constructor(public Spotify: Spotify, params: RouteParams) {
+  constructor(public Spotify: Spotify, params: RouteParams, public settings: Settings) {
     this.result = null;
 
     // query the album
@@ -173,8 +174,12 @@ export class SpotifyAlbumDetail {
     document.body.removeChild(element);
   }
 
-  isAvailableInHomeCountry(markets, homeCountry = 'DE') {
-    return _.any(_.map(markets, m => m === homeCountry));
+  isAvailableInHomeCountry(markets, homeCountryCode = this.settings.getLanguage().key) {
+    return _.any(_.map(markets, m => m === homeCountryCode));
+  }
+
+  isHomeCountry(countryCode) {
+    return this.settings.getLanguage().key === countryCode;
   }
 
   getDiskTotalLength(trackItems: ISpotifyAPITrackToggleable[]) {
