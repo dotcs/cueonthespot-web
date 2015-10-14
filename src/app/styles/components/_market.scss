@@ -1,0 +1,17 @@
+/** @define market */
+.market{}
+  .market__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .market__list_small { font-size: .8em; }
+  .market__entry {
+    display: inline-block;
+    padding: .2em;
+    margin-right: .5em;
+    background-color: $badge-market-color;
+    margin-bottom: .5em;
+    border-radius: 3px;
+  }
+  .market__entry_available { background-color: $badge-active-color; }

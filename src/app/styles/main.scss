@@ -1,72 +1,15 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
+// Variables, Mixins
 @import "variables";
+@import "mixins";
 
-.u-textSmall { font-size: .8em; }
+// Utils
+@import "utilities";
 
-.badge--album { background-color: $colschema-album; }
-.badge--single { background-color: $colschema-single; }
-.badge--compilation {background-color: $colschema-compilation; }
+// Components
+@import "components/album";
+@import "components/search";
+@import "components/market";
 
-main { margin-bottom: $grid-gutter-width; }
-.navbar { border-radius: 0; }
-.Album {}
-.AlbumMeta {
-  .headline { margin-top: 0; }
-  .artist {
-    list-style: none;
-    margin: .5em 0;
-    padding: 0;
-    & > li {
-      display: inline-block;
-      margin-right: .5em;
-    }
-  }
-}
-
-@media screen and (max-width: $screen-xs-max) {
-  .Search-query,
-  .Search-type,
-  .Search-btn{
-    margin-bottom: ($grid-gutter-width / 4);
-  }
-}
-@media screen and (min-width: $screen-sm) {
-  .Search { display: flex; }
-  .Search-query { width: 60%; }
-  .Search-type { width: 20%; }
-  .Search-btn { width: 20%; }
-}
-
-.SearchResults {
-  .table>tbody>tr>td { vertical-align: middle; }
-  .table th,
-  .table td {
-    &.available,
-    &.not-available {
-      border-left: 3px solid transparent;
-    }
-    &.available { border-left-color: $search-result-active-color; }
-    &.not-available { border-left-color: $search-result-inactive-color; }
-    &.cover { width: 100px; }
-  }
-  .reference { padding: 2em; }
-  .no-results-info { margin: 1em 0; }
-  //.market { margin: .5em 0; }
-}
-
-.MarketList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  & > li {
-    display: inline-block;
-    padding: .2em;
-    margin-right: .5em;
-    background-color: $badge-market-color;
-    margin-bottom: .5em;
-    border-radius: 3px;
-    &.available { background-color: $badge-active-color; }
-  }
-}
+// Bootstrap and more
+@import "bootstrap_addons";
+@import "shame";

@@ -1,29 +1,31 @@
-<div class="Album">
+<div class="album">
   <div *ng-if="!result">loading data</div>
   <div *ng-if="result">
-    <div class="AlbumMeta">
+    <div class="album-meta">
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <img [src]="getAlbumCover(300).url" *ng-if="hasAlbumCover()" class="img-responsive"/>
         </div>
         <div class="col-xs-6 col-sm-8">
-          <h1 class="headline">{{ result.name }}</h1>
+          <h1 class="album-meta__headline">{{ result.name }}</h1>
           <span>{{ result.release_date }}</span>
-          <ul class="artist">
+          <ul class="album-meta__artist-list">
             <li *ng-for="#artist of result.artists">
-              <a [router-link]="['/artist-detail', {id: artist.id}]">{{ artist.name }}</a>
+              <a [router-link]="['/artist-detail', {id: artist.id}]" class="album-meta__artist-entry">
+                {{ artist.name }}
+              </a>
             </li>
           </ul>
-          <ul class="MarketList MarketList--small">
-            <li *ng-for="#market of result.available_markets"
-                [class.available]="market === 'DE'">
+          <ul class="market__list market__list_small">
+            <li *ng-for="#market of result.available_markets" class="market__entry"
+                [class.market__entry_available]="market === 'DE'">
               {{ market }}
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="album">
+    <div class="album-single">
       <table class="table table-striped" *ng-for="#disk of disks">
         <thead>
         <tr>

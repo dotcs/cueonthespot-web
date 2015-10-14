@@ -1,38 +1,38 @@
 <div>
-  <div class="Search">
-    <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control Search-query"
+  <div class="search">
+    <input type="text" [(ng-model)]="q" placeholder="Search spotify" class="form-control search__query"
            (keyup)="searchFieldKeyHandler($event)" />
-    <select name="type" [(ng-model)]="type" class="form-control Search-type">
+    <select name="type" [(ng-model)]="type" class="form-control search__type">
       <option *ng-for="#type of types" [value]="type.value" [selected]="type.value === type">
         {{ type.label }}
       </option>
     </select>
     <a [router-link]="getRouterLinkConfFromQuery()"
-       class="btn btn-default Search-btn" [class.disabled]="q.length === 0">Load results</a>
+       class="btn btn-default search__btn" [class.disabled]="q.length === 0">Load results</a>
   </div>
 
-  <div class="SearchResults">
+  <div class="search__results">
     <table class="table table-striped" *ng-if="results">
       <thead>
       <tr>
-        <th class="cover">Cover</th>
+        <th class="search__results-table-cell_cover">Cover</th>
         <th>Albumtitle</th>
         <th>Reference</th>
       </tr>
       <tbody>
       <tr *ng-for="#item of results.items">
         <td
-          [class.available]="isAvailableInHomeCountry(item.available_markets)"
-          [class.not-available]="!isAvailableInHomeCountry(item.available_markets)"
+          [class.search__results-table-cell_available]="isAvailableInHomeCountry(item.available_markets)"
+          [class.search__results-table-cell_not-available]="!isAvailableInHomeCountry(item.available_markets)"
           >
           <img [src]="getImageUrl(item.images)" alt="image" />
         </td>
-        <td>
+        <td class="u-align-vmiddle">
           <div><a [router-link]="getRouterLinkForUri(item.uri)">{{ item.name }}</a></div>
           <span class="badge badge--{{item.album_type}}">{{ item.album_type}}</span>
         </td>
-        <td class="text-center">
-          <a [router-link]="getRouterLinkForUri(item.uri)" class="reference">
+        <td class="text-center u-align-vmiddle">
+          <a [router-link]="getRouterLinkForUri(item.uri)">
             <i class="glyphicon glyphicon-chevron-right"></i>
           </a>
         </td>
@@ -43,7 +43,7 @@
     <div *ng-if="hasNextPage()" class="text-center">
       <button (click)="loadNextPage()" class="btn btn-default">Next page</button>
     </div>
-    <div *ng-if="!results" class="no-results-info">
+    <div *ng-if="!results" class="search__results-table_no-results-info">
       <div class="alert alert-info">
         <strong>Info</strong>: No results.
       </div>

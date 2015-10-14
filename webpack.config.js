@@ -16,6 +16,7 @@ var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var csswring = require('csswring');
+var bemLinter = require('postcss-bem-linter');
 
 // Webpack Plugins
 var OccurenceOrderPlugin = webpack.optimize.OccurenceOrderPlugin;
@@ -164,7 +165,11 @@ module.exports = {
   },
 
   postcss: function () {
-    return [autoprefixer, csswring];
+    return [
+      autoprefixer,
+      bemLinter('bem'),
+      csswring
+    ];
   },
 
   plugins: env({

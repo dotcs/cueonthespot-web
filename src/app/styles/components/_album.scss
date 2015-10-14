@@ -1,0 +1,18 @@
+/** @define album */
+.album {}
+
+/** @define album-single */
+.album-single {}
+
+/** @define album-meta */
+.album-meta {}
+  .album-meta__headline { margin-top: 0; }
+  .album-meta__artist-list {
+    list-style: none;
+    margin: .5em 0;
+    padding: 0;
+  }
+  .album-meta__artist-entry {
+    display: inline-block;
+    margin-right: .5em;
+  }

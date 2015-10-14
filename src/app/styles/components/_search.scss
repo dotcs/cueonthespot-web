@@ -1,0 +1,24 @@
+/** @define search */
+.search {}
+  @media screen and (max-width: $screen-xs-max) {
+    .search__query,
+    .search__type,
+    .search__btn{
+      margin-bottom: ($grid-gutter-width / 4);
+    }
+  }
+  @media screen and (min-width: $screen-sm) {
+    .search { display: flex; }
+    .search__query { width: 60%; }
+    .search__type { width: 20%; }
+    .search__btn { width: 20%; }
+  }
+
+  .search__results {}
+  .search__results-table-cell { vertical-align: middle; }
+    .search__results-table-cell_available,
+    .search__results-table-cell_not-available { border-left: 3px solid transparent; }
+    .search__results-table-cell_available { border-left-color: $search-result-active-color; }
+    .search__results-table-cell_cover { width: 100px; }
+  .search__results-table_no-results-info { margin: .5em 0; }
+

@@ -16,6 +16,7 @@ import {HTTP_BINDINGS} from 'angular2/http';
  */
 import {App} from './app';
 
+require('./styles/bootstrap.scss');
 require('./styles/main.scss');
 
 /*
