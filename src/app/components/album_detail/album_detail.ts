@@ -3,11 +3,11 @@ import {Component, View, Pipe} from 'angular2/angular2';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
 
-import {Spotify} from '../spotify';
-import {CueGenerator} from '../../lib/cue-generator';
+import {Spotify} from 'app/services/spotify';
+import {CueGenerator} from 'app/lib/cue-generator';
 
 // Sample data used during development
-const exampleAlbumData = require('../../examples/album-detail.json');
+const exampleAlbumData = require('app/examples/album-detail.json');
 
 /**
  * Extend the interface of a track, such that it can be toggled.

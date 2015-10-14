@@ -4,7 +4,7 @@ import {RouteConfig, Router, RouteParams, Location } from 'angular2/router';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {ROUTER_DIRECTIVES } from 'angular2/router';
 
-import {Spotify} from '../spotify';
+import {Spotify} from 'app/services/spotify';
 
 let exampleAlbumSearch = require('../../examples/album-search.json');
 

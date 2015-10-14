@@ -14,12 +14,12 @@ import {HTTP_BINDINGS} from 'angular2/http';
  * App Component
  * our top level component that holds all of our components
  */
-import {App} from './app';
+import {App} from 'app/app';
 
-require('./styles/bootstrap.scss');
-require('./styles/main.scss');
+require('app/styles/bootstrap.scss');
+require('app/styles/main.scss');
 
-import {Spotify} from './components/spotify';
+import {Spotify} from 'app/services/spotify';
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
