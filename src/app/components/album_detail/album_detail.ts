@@ -6,9 +6,6 @@ import {ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
 import {Spotify} from 'app/services/spotify';
 import {CueGenerator} from 'app/lib/cue-generator';
 
-// Sample data used during development
-const exampleAlbumData = require('app/examples/album-detail.json');
-
 /**
  * Extend the interface of a track, such that it can be toggled.
  */
@@ -66,17 +63,6 @@ export class SpotifyAlbumDetail {
       this.tracksByDisks = this.groupTracksByDiscs(<ISpotifyAPITrackToggleable[]>this.result.tracks.items);
       this.disks = Object.keys(this.tracksByDisks);
     });
-
-    // FOR DEBUGGING ONLY
-    // =========
-    //this.result = exampleAlbumData;
-    //// prepare checkbox support
-    //this.toggleAllTrackItems(<ISpotifyAPITrackToggleable[]>this.result.tracks.items, true);
-    //
-    //// extract the disk information
-    //this.tracksByDisks = this.groupTracksByDiscs(<ISpotifyAPITrackToggleable[]>this.result.tracks.items);
-    //this.disks = Object.keys(this.tracksByDisks);
-    // END DEBUGGING ===========
   }
 
   /**

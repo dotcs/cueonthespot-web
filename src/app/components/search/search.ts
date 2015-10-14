@@ -6,8 +6,6 @@ import {ROUTER_DIRECTIVES } from 'angular2/router';
 
 import {Spotify} from 'app/services/spotify';
 
-let exampleAlbumSearch = require('../../examples/album-search.json');
-
 interface IResultImage {
   width: number,
   height: number,
@@ -116,23 +114,10 @@ export class SpotifySearch{
    * Generic query method that queries the Spotify service based on the `type` that the user has selected in the UI.
    */
   query() {
-    //this._fakeQuery(this.type); // debug
-    //return null; // debug
     this.Spotify.query(this.type, this.q)
       .subscribe(results => {
         this.results = results[this.type];
       });
-  }
-
-  _fakeQuery(type: string) {
-    switch (type) {
-      case 'albums':
-        this.results = exampleAlbumSearch[this.type];
-        break;
-      default:
-        this.results = [];
-        break;
-    }
   }
 
   /**

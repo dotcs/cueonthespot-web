@@ -197,6 +197,7 @@ module.exports = {
     'all': [
       new DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
+        '__DEV__': NODE_ENV === 'development',
         'VERSION': JSON.stringify(pkg.version)
       }),
       new OccurenceOrderPlugin(),
