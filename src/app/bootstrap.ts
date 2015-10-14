@@ -28,7 +28,7 @@ const requiredBootstrapPlugins = [
   //'alert',
   //'button',
   //'carousel',
-  //'collapse',
+  'collapse',
   'dropdown',
   //'modal',
   //'popover',
