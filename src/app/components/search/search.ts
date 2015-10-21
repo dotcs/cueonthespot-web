@@ -74,10 +74,10 @@ export class SpotifySearch{
     let route = '';
     switch (parts[1]) {
       case 'artist':
-        route = '/artist-detail';
+        route = '/ArtistDetail';
         break;
       case 'album':
-        route = '/album-detail';
+        route = '/AlbumDetail';
         break;
     }
     return [route, {id: parts[2]}];
@@ -108,7 +108,7 @@ export class SpotifySearch{
    * @returns {any} Route representation that is consumable by RouterLink directive of the router.
    */
   getRouterLinkConfFromQuery() {
-    return ['/search-type-query', {type: this.type, query: this.q}];
+    return ['/SearchTypeQuery', {type: this.type, query: this.q}];
   }
 
   /**

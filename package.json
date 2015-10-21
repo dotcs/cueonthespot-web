@@ -22,7 +22,7 @@
     "remove-tsd-loader-typings": "rimraf node_modules/typescript-simple-loader/typescript-simple-loader.d.ts",
     "tsd-update": "npm run remove-tsd-loader-typings && tsd reinstall --overwrite",
     "postinstall": "npm run tsd-update && tsd install && tsd link",
-    "prestart": "npm install",
+    "prestart": "",
     "start": "npm run server"
   },
   "repository": {
@@ -36,12 +36,13 @@
   },
   "homepage": "",
   "dependencies": {
-    "angular2": "2.0.0-alpha.37",
+    "angular2": "2.0.0-alpha.44",
     "bootstrap-sass": "^3.3.5",
+    "jquery": "^2.1.4",
     "lodash": "^3.10.1",
     "reflect-metadata": "^0.1.1",
     "rx": "^2.5.3",
-    "zone.js": "^0.5.4"
+    "zone.js": "^0.5.8"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",

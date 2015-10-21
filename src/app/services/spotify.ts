@@ -1,4 +1,4 @@
-import {Injectable} from 'angular2/di';
+import {Injectable} from 'angular2/angular2';
 import {Http} from 'angular2/http';
 
 @Injectable()
@@ -55,7 +55,6 @@ export class Spotify {
    */
   public loadUrl(url: string) {
     return this.http.get(url)
-      .toRx()
       .map(res => res.json())
   }
 }

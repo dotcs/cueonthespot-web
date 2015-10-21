@@ -5,10 +5,10 @@ import {bootstrap} from 'angular2/angular2';
 /*
  * Bindings provided by Angular
  */
-import {FORM_BINDINGS} from 'angular2/angular2'
-import {ROUTER_BINDINGS} from 'angular2/router';
-import {ELEMENT_PROBE_BINDINGS} from 'angular2/debug';
-import {HTTP_BINDINGS} from 'angular2/http';
+import {FORM_PROVIDERS} from 'angular2/angular2'
+import {ROUTER_PROVIDERS} from 'angular2/router';
+import {ELEMENT_PROBE_PROVIDERS} from 'angular2/angular2';
+import {HTTP_PROVIDERS} from 'angular2/http';
 
 /*
  * App Component
@@ -50,10 +50,10 @@ import {Settings} from 'app/services/settings';
  */
 bootstrap(App, [
   // These are dependencies of our App
-  FORM_BINDINGS,
-  ROUTER_BINDINGS,
-  HTTP_BINDINGS,
-  ELEMENT_PROBE_BINDINGS,
+  FORM_PROVIDERS,
+  ROUTER_PROVIDERS,
+  HTTP_PROVIDERS,
+  ELEMENT_PROBE_PROVIDERS,
   Spotify,
   Settings
 ]);

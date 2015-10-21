@@ -35,11 +35,11 @@ class NotImplementedYet {
  * Top Level Component
  */
 @RouteConfig([
-  { path: '/search', component: SpotifySearch, 'as': 'search' },
-  { path: '/search/:type/', component: SpotifySearch, 'as': 'search-type' },
-  { path: '/search/:type/:query', component: SpotifySearch, 'as': 'search-type-query' },
-  { path: '/artist/:id', component: NotImplementedYet, 'as': 'artist-detail' },
-  { path: '/album/:id', component: SpotifyAlbumDetail, 'as': 'album-detail' }
+  { path: '/search', component: SpotifySearch, 'as': 'Search' },
+  { path: '/search/:type/', component: SpotifySearch, 'as': 'SearchType' },
+  { path: '/search/:type/:query', component: SpotifySearch, 'as': 'SearchTypeQuery' },
+  { path: '/artist/:id', component: NotImplementedYet, 'as': 'ArtistDetail' },
+  { path: '/album/:id', component: SpotifyAlbumDetail, 'as': 'AlbumDetail' }
 ])
 @Component({
   selector: 'app'

@@ -11,7 +11,7 @@
           <span>{{ result.release_date }}</span>
           <ul class="album-meta__artist-list">
             <li *ng-for="#artist of result.artists">
-              <a [router-link]="['/artist-detail', {id: artist.id}]" class="album-meta__artist-entry">
+              <a [router-link]="['/ArtistDetail', {id: artist.id}]" class="album-meta__artist-entry">
                 {{ artist.name }}
               </a>
             </li>
