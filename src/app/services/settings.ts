@@ -9,7 +9,7 @@ export class Settings {
 
   constructor() {
 
-    let defaultLanguage = 'EN';
+    let defaultLanguage = 'US';
     let language = localStorage.getItem('language');
 
     this.availableLanguages = languages.map(language => {
