@@ -7,7 +7,10 @@
           <img [src]="getAlbumCover(300).url" *ng-if="hasAlbumCover()" class="img-responsive"/>
         </div>
         <div class="col-xs-6 col-sm-8">
-          <h1 class="album-meta__headline">{{ result.name }}</h1>
+          <h1 class="album-meta__headline">
+            {{ result.name }} <small><a [href]="getPlayAlbumUrl()" target="_blank">
+              <i class="glyphicon glyphicon-music"></i></a></small>
+          </h1>
           <span>{{ result.release_date }}</span>
           <ul class="album-meta__artist-list">
             <li *ng-for="#artist of result.artists">
@@ -39,7 +42,7 @@
           <th>Name</th>
           <th class="text-center">Duration</th>
           <th class="text-center">Explicit</th>
-          <th class="text-center" *ng-if="anyTrackHasPreview(tracksByDisks[disk])">Preview</th>
+          <th class="text-center">Preview</th>
         </tr>
         </thead>
         <tbody>
@@ -50,7 +53,7 @@
           <td class="text-center">{{ item.duration_ms | duration }}</td>
           <td class="text-center"><i class="glyphicon {{ item.explicit ? 'glyphicon-ok' : 'glyphicon-remove'}}"></i></td>
           <td class="text-center" *ng-if="anyTrackHasPreview(tracksByDisks[disk])">
-            <a [href]="item.preview_url" target="_blank" *ng-if="item.preview_url !== null">
+            <a [href]="getPlayTrackUrl(item)" target="_blank">
               <i class="glyphicon glyphicon-music"></i>
             </a>
           </td>

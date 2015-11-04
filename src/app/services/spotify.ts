@@ -3,10 +3,12 @@ import {Http} from 'angular2/http';
 
 @Injectable()
 export class Spotify {
-  baseUrl: string;
+  apiBaseUrl: string;
+  playBaseUrl: string;
 
   constructor(public http: Http) {
-    this.baseUrl = 'https://api.spotify.com';
+    this.apiBaseUrl = 'https://api.spotify.com';
+    this.playBaseUrl = 'https://play.spotify.com';
   }
 
   /**
@@ -32,7 +34,7 @@ export class Spotify {
       throw Error(`Type '${type} is unknown.'`);
     }
 
-    const url = `${this.baseUrl}/v1/search?type=${queryType}&q=${query}`;
+    const url = `${this.apiBaseUrl}/v1/search?type=${queryType}&q=${query}`;
     return this.loadUrl(url);
   }
 
@@ -43,7 +45,7 @@ export class Spotify {
    * @returns {Observable<Object>|Rx.Observable<Object>} Rx.Observable
    */
   public queryAlbum(id: string) {
-    const url = `${this.baseUrl}/v1/albums/${id}`;
+    const url = `${this.apiBaseUrl}/v1/albums/${id}`;
     return this.loadUrl(url);
   }
 
@@ -56,5 +58,9 @@ export class Spotify {
   public loadUrl(url: string) {
     return this.http.get(url)
       .map(res => res.json())
+  }
+
+  public getPlayUrl(type: string, identifier: string): string {
+    return `${this.playBaseUrl}/${type}/${identifier}`;
   }
 }

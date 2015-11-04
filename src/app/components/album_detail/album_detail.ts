@@ -46,15 +46,17 @@ export class DurationPipe {
   template: require('to-string!./album_detail.html')
 })
 export class SpotifyAlbumDetail {
+  id: string;
   result: ISpotifyAPIAlbum;
   disks: String[];
   tracksByDisks: {[index: string]: ISpotifyAPITrackToggleable[]};
 
   constructor(public Spotify: Spotify, params: RouteParams, public settings: Settings) {
     this.result = null;
+    this.id = params.get('id');
 
     // query the album
-    Spotify.queryAlbum(params.get('id')).subscribe(response => {
+    Spotify.queryAlbum(this.id).subscribe(response => {
       this.result = response;
 
       // prepare checkbox support
@@ -185,7 +187,14 @@ export class SpotifyAlbumDetail {
   getDiskTotalLength(trackItems: ISpotifyAPITrackToggleable[]) {
     let checkedItems = _.filter(trackItems, item => item._isChecked);
     return _.sum(_.pluck(checkedItems, 'duration_ms'));
+  }
 
+  getPlayAlbumUrl(): string {
+    return this.Spotify.getPlayUrl('album', this.id);
+  }
+
+  getPlayTrackUrl(item: ISpotifyAPITrackToggleable): string {
+    return this.Spotify.getPlayUrl('track', item.id)
   }
 
 }
