@@ -74,8 +74,9 @@ REM SERVICE "${this.service}"
    * Add a disc to the internal CUE sheet representation.
    * @param diskNumber {number} Disk number
    * @param trackList {ISpotifyAPITrack[]} Disc's tracks
+   * @param offsetPerTrackMs {number} Systematic offset per track in milliseconds
    */
-  public addDisk(diskNumber: number, trackList: Array<ISpotifyAPITrack>) {
+  public addDisk(diskNumber: number, trackList: Array<ISpotifyAPITrack>, offsetPerTrackMs:number=3100) {
     this.result +=
 `REM DISCNUMBER ${diskNumber}
 REM TOTALDISCS ${this.totalDisks}
@@ -91,7 +92,7 @@ TITLE "${track.name}"
 PERFORMER "${_.map(track.artists, artist => artist.name).join(', ')}"
 INDEX 01 "${this.timeToString(this.cumTimeMs)}"
 `;
-      this.cumTimeMs += track.duration_ms;
+      this.cumTimeMs += track.duration_ms + offsetPerTrackMs;
     });
   }
 
